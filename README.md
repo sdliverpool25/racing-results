@@ -9,7 +9,7 @@ Open the site and you get:
 - A race row that opens onto splits, notes, Strava and Notion links, and any data note from the source.
 - Two charts: races per year by discipline, and finish time across years for a chosen distance.
 
-The export has 59 rows. One row is empty and one is a `COVID YEAR` placeholder. Both stay hidden until you turn on **Show placeholder rows**, which leaves 57 races in the list.
+The export has 81 rows. One row is empty and one is a `COVID YEAR` placeholder. Both stay hidden until you turn on **Show placeholder rows**, which leaves 79 races in the list, including 22 parkruns. The **Parkrun** toggle lists those 5Ks and points the finish-time chart at them.
 
 ## Browse locally
 

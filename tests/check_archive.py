@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 RACES = json.loads((ROOT / "data" / "races.json").read_text(encoding="utf-8"))
 
 EXPECTED = {
+    "5K": ("0:21:59", "2026-04-11", "Galup Reserve parkrun #73"),
     "12K": ("0:58:00", "2025-08-31", "City to Surf 12km"),
     "Trail": ("1:09:00", "2020-12-06", "Stay Puft"),
     "Sprint": ("1:17:00", "2025-01-12", "Interclubs"),
@@ -31,10 +32,13 @@ def placeholder(race):
 
 
 def main():
-    assert len(RACES) == 59, len(RACES)
+    assert len(RACES) == 81, len(RACES)
     real = [race for race in RACES if not placeholder(race)]
     hidden = [race for race in RACES if placeholder(race)]
-    assert len(real) == 57, len(real)
+    assert len(real) == 79, len(real)
+    parkruns = [race for race in real if race.get("event_type") == "parkrun" or race.get("race_category") == "parkrun"]
+    assert len(parkruns) == 22, len(parkruns)
+    assert all(race.get("discipline") == "Run" and race.get("distance") == "5K" for race in parkruns)
     assert len(hidden) == 2
     assert any(not (race.get("race_name") or "").strip() for race in hidden)
     assert any((race.get("race_name") or "").upper() == "COVID YEAR" for race in hidden)
@@ -58,7 +62,9 @@ def main():
     assert (iron["swim"], iron["bike"], iron["run"]) == ("1:18:00", "5:30:00", "4:07:00")
     half = best["70.3"]
     assert (half["swim"], half["bike"], half["run"]) == ("0:37:00", "2:39:00", "2:03:00")
-    print("archive ok: 57 races, 14 personal bests")
+    five = best["5K"]
+    assert "61.18% age grade" in (five.get("position") or "")
+    print("archive ok: 79 races, 15 personal bests, 22 parkruns")
 
 
 if __name__ == "__main__":

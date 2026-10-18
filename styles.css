@@ -436,10 +436,12 @@ input[type="search"]::placeholder {
   opacity: 1;
 }
 
+.filter-actions,
 .disciplines {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
+  align-items: center;
 }
 
 .disciplines button {
@@ -455,6 +457,21 @@ input[type="search"]::placeholder {
   background: var(--shell);
   border-color: var(--shell);
   color: var(--paper);
+}
+
+.parkrun-toggle {
+  min-height: 2.75rem;
+  padding: 0.35rem 0.8rem;
+  background: transparent;
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  font-weight: 700;
+}
+
+.parkrun-toggle[aria-pressed="true"] {
+  background: var(--mark);
+  border-color: var(--ink);
+  color: var(--ink);
 }
 
 .check {
