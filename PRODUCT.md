@@ -34,7 +34,7 @@ Results are maintained in the Airtable base "Racing Results" (`app3YvIK7HbQSRz9F
 - Charts: races per year by discipline, and finish time over years for a chosen distance.
 - Hide the empty row and the "COVID YEAR" placeholder unless the reader asks to see them.
 - The site must not contain an Airtable token or any other secret. No GitHub Action that needs secrets.
-- 59 records in the export: 57 real races, one empty row, one placeholder.
+- 81 records in the export: 79 real races (including 22 parkruns at 5K), one empty row, one placeholder.
 
 ## Brand Commitments
 

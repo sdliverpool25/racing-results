@@ -6,6 +6,7 @@
     "70.3",
     "T100",
     "Ironman",
+    "5K",
     "12K",
     "Half Marathon",
     "Marathon",
@@ -23,6 +24,7 @@
     "70.3": "70.3",
     T100: "100",
     Ironman: "140.6",
+    "5K": "5K",
     "12K": "12",
     "Half Marathon": "21.1",
     Marathon: "42.2",
@@ -63,6 +65,7 @@
     sort: "date-desc",
     showHidden: false,
     chartDistance: "Ironman",
+    parkrun: false,
     openId: null,
   };
 
@@ -81,6 +84,7 @@
     sort: document.getElementById("sort"),
     query: document.getElementById("query"),
     showHidden: document.getElementById("show-hidden"),
+    parkrun: document.getElementById("parkrun-toggle"),
     list: document.getElementById("list"),
     chartDistance: document.getElementById("chart-distance"),
     yearCaption: document.getElementById("year-caption"),
@@ -94,6 +98,19 @@
   let bests = [];
   let yearChart = null;
   let progressChart = null;
+
+  function isParkrun(race) {
+    return race.event_type === "parkrun" || race.race_category === "parkrun";
+  }
+
+  function displayTime(value) {
+    if (!value) return "";
+    const parts = String(value).split(":");
+    if (parts.length === 3 && Number(parts[0]) === 0) {
+      return String(Number(parts[1])) + ":" + parts[2];
+    }
+    return String(value);
+  }
 
   function isPlaceholder(race) {
     const name = (race.race_name || "").trim();
@@ -127,8 +144,12 @@
     return "rgba(" + r + "," + g + "," + b + "," + alpha + ")";
   }
 
-  function clockLabel(total) {
+  function clockLabel(total, underHour) {
     const seconds = Math.round(total);
+    if (underHour) {
+      const minutes = Math.floor(seconds / 60);
+      return minutes + ":" + String(seconds % 60).padStart(2, "0");
+    }
     const h = Math.floor(seconds / 3600);
     const m = Math.floor((seconds % 3600) / 60);
     return h + ":" + String(m).padStart(2, "0");
@@ -166,6 +187,7 @@
       .filter((race) => {
         if (state.discipline !== "all" && (race.discipline || "Unspecified") !== state.discipline) return false;
         if (state.distance !== "all" && race.distance !== state.distance) return false;
+        if (state.parkrun && !isParkrun(race)) return false;
         if (state.year !== "all" && (race.date || "").slice(0, 4) !== state.year) return false;
         if (!q) return true;
         const hay = ((race.race_name || "") + " " + (race.notes || "")).toLowerCase();
@@ -300,6 +322,7 @@
     els.year.value = state.year;
     els.sort.value = state.sort;
     els.showHidden.checked = state.showHidden;
+    if (els.parkrun) els.parkrun.setAttribute("aria-pressed", String(state.parkrun));
 
     const timed = uniqueSorted(
       pool.filter((race) => race.finish_seconds != null).map((race) => race.distance),
@@ -307,7 +330,7 @@
     );
     els.chartDistance.replaceChildren();
     timed.forEach((distance) => {
-      const option = el("option", null, distance);
+      const option = el("option", null, distance === "5K" ? "5K / parkrun" : distance);
       option.value = distance;
       els.chartDistance.append(option);
     });
@@ -331,17 +354,19 @@
       button.setAttribute("aria-pressed", String(pressed));
       button.setAttribute(
         "aria-label",
-        race.distance + ", personal best " + race.finish_time + ", " + race.race_name + (pressed ? ". Showing this distance. Activate to show every distance." : ". Show only this distance.")
+        race.distance + ", personal best " + displayTime(race.finish_time) + ", " + race.race_name + (pressed ? ". Showing this distance. Activate to show every distance." : ". Show only this distance.")
       );
       button.append(el("span", "post-code", MARKER[race.distance] || race.distance));
       button.append(el("span", "post-name", race.distance));
-      button.append(el("span", "post-time", race.finish_time || ""));
+      button.append(el("span", "post-time", displayTime(race.finish_time)));
       button.addEventListener("click", () => {
         if (state.distance === race.distance) {
           state.distance = "all";
+          state.parkrun = false;
         } else {
           state.distance = race.distance;
           state.chartDistance = race.distance;
+          state.parkrun = race.distance === "5K";
         }
         renderAll();
       });
@@ -370,9 +395,11 @@
     const bits = [formatDate(race.date)];
     if (race.distance_km != null) bits.push(String(race.distance_km) + " km in the source");
     if (race.discipline) bits.push(race.discipline);
+    if (isParkrun(race)) bits.push("parkrun");
+    if (race.position) bits.push(race.position);
     copy.append(el("p", "board-meta", bits.join(" · ")));
     head.append(copy);
-    head.append(el("p", "board-time", race.finish_time));
+    head.append(el("p", "board-time", displayTime(race.finish_time)));
     els.board.append(head);
 
     if (race.distance === "Ironman" || race.distance === "70.3") {
@@ -446,7 +473,7 @@
       ["Distance (original)", race.distance_original],
       ["Event type", race.event_type],
       ["Race category", race.race_category],
-      ["Finish time", race.finish_time],
+      ["Finish time", race.finish_time ? displayTime(race.finish_time) : null],
       ["Swim", race.swim],
       ["T1", race.t1],
       ["Bike", race.bike],
@@ -482,7 +509,7 @@
     const links = el("ul", "links");
     if (race.link) {
       const item = el("li");
-      const label = /strava\.com/i.test(race.link) ? "Strava" : "Link";
+      const label = /strava\.com/i.test(race.link) ? "Strava" : /parkrun\./i.test(race.link) ? "Parkrun" : "Link";
       item.append(externalLink(race.link, label));
       links.append(item);
     }
@@ -519,6 +546,7 @@
         state.discipline = "all";
         state.distance = "all";
         state.year = "all";
+        state.parkrun = false;
         state.query = "";
         els.query.value = "";
         renderAll();
@@ -547,7 +575,7 @@
         button.append(name);
         button.append(el("span", "c-dist", race.distance || "No distance"));
         button.append(el("span", "c-disc", race.discipline || "No discipline"));
-        const time = el("span", "c-time" + (race.finish_time ? "" : " is-missing"), race.finish_time || "No time");
+        const time = el("span", "c-time" + (race.finish_time ? "" : " is-missing"), race.finish_time ? displayTime(race.finish_time) : "No time");
         button.append(time);
         button.append(chevron());
         button.addEventListener("click", () => {
@@ -675,7 +703,7 @@
       progressList.append(el("li", null, "No finish time for " + state.chartDistance + "."));
     } else {
       series.forEach((race) => {
-        progressList.append(el("li", null, formatDate(race.date) + " — " + race.race_name + " — " + race.finish_time));
+        progressList.append(el("li", null, formatDate(race.date) + " — " + race.race_name + " — " + displayTime(race.finish_time)));
       });
     }
     els.progressTable.replaceChildren(progressList);
@@ -698,7 +726,8 @@
         },
       ],
     };
-    const names = series.map((race) => race.race_name + " — " + race.finish_time);
+    const names = series.map((race) => race.race_name + " — " + displayTime(race.finish_time));
+    const underHour = series.length > 0 && series.every((race) => race.finish_seconds < 3600);
     const progressOptions = {
       responsive: true,
       maintainAspectRatio: false,
@@ -712,7 +741,7 @@
           ticks: {
             color: "#14241C",
             font: { family: "Barlow" },
-            callback: (value) => clockLabel(value),
+            callback: (value) => clockLabel(value, underHour),
           },
           grid: { color: "rgba(20, 36, 28, 0.12)" },
         },
@@ -756,6 +785,7 @@
     });
     els.distance.addEventListener("change", () => {
       state.distance = els.distance.value;
+      state.parkrun = state.distance === "5K";
       if (state.distance !== "all") state.chartDistance = state.distance;
       renderAll();
     });
@@ -771,6 +801,16 @@
       state.showHidden = els.showHidden.checked;
       renderList();
       renderCharts();
+    });
+    els.parkrun.addEventListener("click", () => {
+      state.parkrun = !state.parkrun;
+      if (state.parkrun) {
+        state.distance = "5K";
+        state.chartDistance = "5K";
+      } else if (state.distance === "5K") {
+        state.distance = "all";
+      }
+      renderAll();
     });
     els.chartDistance.addEventListener("change", () => {
       state.chartDistance = els.chartDistance.value;
