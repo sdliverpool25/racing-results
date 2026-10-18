@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shane Drumm — Race results</title>
+  <meta name="description" content="Shane Drumm's running, triathlon, Ironman, cycling, and swimming results, with personal bests, splits, and season charts.">
+  <meta name="theme-color" content="#16352C">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#bests">Skip to personal bests</a>
+  <header class="shell">
+    <div class="wrap shell-bar">
+      <h1 class="brand"><a href="#bests">Shane Drumm</a></h1>
+      <nav aria-label="Page">
+        <a href="#bests">Bests</a>
+        <a href="#races">Races</a>
+        <a href="#charts">Charts</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p id="status" class="status" role="status">Loading the race archive.</p>
+    <noscript>
+      <p class="status">This page reads <code>data/races.json</code> in the browser. Enable JavaScript, and open the folder through a local web server rather than as a file.</p>
+    </noscript>
+
+    <section id="bests" class="section" aria-labelledby="bests-heading" hidden>
+      <h2 id="bests-heading">Personal bests</h2>
+      <p class="lede" id="bests-lede"></p>
+      <div id="posts" class="posts" role="group" aria-label="Personal bests by distance"></div>
+      <div id="board" class="board"></div>
+    </section>
+
+    <section id="races" class="section" aria-labelledby="races-heading" hidden>
+      <h2 id="races-heading">Races</h2>
+      <p id="span" class="lede"></p>
+      <form id="filters" class="filters" role="search">
+        <div class="filters-row">
+          <label class="field">
+            Search
+            <input id="query" type="search" name="q" placeholder="Race name or notes" autocomplete="off" enterkeyhint="search">
+          </label>
+          <label class="field">
+            Distance
+            <select id="distance" name="distance"></select>
+          </label>
+          <label class="field">
+            Year
+            <select id="year" name="year"></select>
+          </label>
+          <label class="field">
+            Sort
+            <select id="sort" name="sort">
+              <option value="date-desc">Newest first</option>
+              <option value="date-asc">Oldest first</option>
+              <option value="time-asc">Fastest finish</option>
+              <option value="time-desc">Slowest finish</option>
+            </select>
+          </label>
+        </div>
+        <div id="disciplines" class="disciplines" role="group" aria-label="Discipline"></div>
+        <label class="check">
+          <input id="show-hidden" type="checkbox" name="placeholders">
+          Show placeholder rows
+        </label>
+      </form>
+      <div class="sheet-head" aria-hidden="true">
+        <span>Date</span>
+        <span>Race</span>
+        <span>Distance</span>
+        <span>Discipline</span>
+        <span>Finish</span>
+        <span></span>
+      </div>
+      <div id="list"></div>
+    </section>
+
+    <section id="charts" class="section" aria-labelledby="charts-heading" hidden>
+      <h2 id="charts-heading">Charts</h2>
+      <div class="chart-grid">
+        <figure>
+          <figcaption>Races per year</figcaption>
+          <p class="caption" id="year-caption"></p>
+          <div class="chart-frame">
+            <canvas id="year-chart"></canvas>
+          </div>
+          <p id="year-fallback" class="caption" hidden></p>
+          <details>
+            <summary>Year counts</summary>
+            <div id="year-table"></div>
+          </details>
+        </figure>
+        <figure>
+          <figcaption>
+            <label>
+              Finish time
+              <select id="chart-distance"></select>
+            </label>
+          </figcaption>
+          <p class="caption">Lower is a faster finish. The scale starts near the data.</p>
+          <div class="chart-frame">
+            <canvas id="progress-chart"></canvas>
+          </div>
+          <p id="progress-fallback" class="caption" hidden></p>
+          <details>
+            <summary>Times in this chart</summary>
+            <div id="progress-table"></div>
+          </details>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <div class="wrap">
+      <p>Finish times are the values stored for each race. Two source rows — an empty record and a COVID YEAR placeholder — stay out of the list until you show placeholder rows.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
