@@ -1,0 +1,466 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-18T10:26:11Z",
+  "title": "Design System: Shane Drumm Race Results",
+  "extensions": {
+    "colorMeta": {
+      "shell": {
+        "role": "primary",
+        "displayName": "Roadside Green",
+        "canonical": "#16352c",
+        "tonalRamp": [
+          "#000f0a",
+          "#0c2b23",
+          "#2a4940",
+          "#49695f",
+          "#6a8b80",
+          "#8caea2",
+          "#afd2c6",
+          "#d4f8eb"
+        ]
+      },
+      "mark": {
+        "role": "secondary",
+        "displayName": "Course Yellow",
+        "canonical": "#f0c400",
+        "tonalRamp": [
+          "#100b00",
+          "#2e2400",
+          "#514000",
+          "#755f00",
+          "#9d7f00",
+          "#c6a100",
+          "#f0c402",
+          "#ffeeb9"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Marker Ink",
+        "canonical": "#14241c",
+        "tonalRamp": [
+          "#020f08",
+          "#192921",
+          "#35473e",
+          "#54665d",
+          "#75887d",
+          "#97aba0",
+          "#bbcfc4",
+          "#e0f4e9"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Shade Green",
+        "canonical": "#2a4538",
+        "tonalRamp": [
+          "#000f07",
+          "#102b1f",
+          "#2e493c",
+          "#4d695b",
+          "#6d8a7b",
+          "#8fad9e",
+          "#b3d2c2",
+          "#d8f7e7"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Shell Paper",
+        "canonical": "#f4f6f1",
+        "tonalRamp": [
+          "#0a0c09",
+          "#242622",
+          "#41433f",
+          "#60625e",
+          "#81837f",
+          "#a4a6a1",
+          "#c8cac5",
+          "#edefea"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Gravel",
+        "canonical": "#e7ebe4",
+        "tonalRamp": [
+          "#0a0c08",
+          "#232621",
+          "#40433e",
+          "#5f625d",
+          "#80847d",
+          "#a3a6a0",
+          "#c7cbc4",
+          "#ecf0e9"
+        ]
+      },
+      "plate": {
+        "role": "neutral",
+        "displayName": "Plate White",
+        "canonical": "#f7f8f4",
+        "tonalRamp": [
+          "#0b0b09",
+          "#252523",
+          "#42423f",
+          "#61625e",
+          "#82837f",
+          "#a4a5a2",
+          "#c9cac6",
+          "#eeefeb"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Gravel Line",
+        "canonical": "#c5cfc6",
+        "tonalRamp": [
+          "#070d07",
+          "#202721",
+          "#3c453d",
+          "#5b645c",
+          "#7c857d",
+          "#9ea89f",
+          "#c2ccc3",
+          "#e7f2e8"
+        ]
+      },
+      "swim": {
+        "role": "tertiary",
+        "displayName": "Swim Teal",
+        "canonical": "#0e6e78",
+        "tonalRamp": [
+          "#000e10",
+          "#002b30",
+          "#004b53",
+          "#0e6e78",
+          "#3d909a",
+          "#62b4be",
+          "#87d9e3",
+          "#c9f9ff"
+        ]
+      },
+      "bike": {
+        "role": "tertiary",
+        "displayName": "Bike Blue",
+        "canonical": "#1e4d8c",
+        "tonalRamp": [
+          "#000a21",
+          "#002351",
+          "#10407e",
+          "#3261a2",
+          "#5383c7",
+          "#75a7ed",
+          "#a7ccff",
+          "#e5f0ff"
+        ]
+      },
+      "run": {
+        "role": "tertiary",
+        "displayName": "Run Red",
+        "canonical": "#b23a2e",
+        "tonalRamp": [
+          "#1f0000",
+          "#4d0000",
+          "#810000",
+          "#a83126",
+          "#d05647",
+          "#f87a69",
+          "#ffb3a7",
+          "#ffe9e5"
+        ]
+      },
+      "missing": {
+        "role": "neutral",
+        "displayName": "Missing Rust",
+        "canonical": "#8a4e12",
+        "tonalRamp": [
+          "#160700",
+          "#3b1c00",
+          "#643400",
+          "#8c5015",
+          "#b1723b",
+          "#d6945e",
+          "#fdb882",
+          "#ffeada"
+        ]
+      },
+      "trail-run": {
+        "role": "tertiary",
+        "displayName": "Trail Green",
+        "canonical": "#3f6b45",
+        "tonalRamp": [
+          "#001002",
+          "#002f0c",
+          "#214d29",
+          "#416d47",
+          "#628f67",
+          "#84b389",
+          "#a8d8ac",
+          "#ccfed1"
+        ]
+      },
+      "open-water": {
+        "role": "tertiary",
+        "displayName": "Open Water",
+        "canonical": "#2a6f97",
+        "tonalRamp": [
+          "#000d17",
+          "#00283e",
+          "#004769",
+          "#226890",
+          "#478ab3",
+          "#6aaed9",
+          "#8ed2ff",
+          "#def2ff"
+        ]
+      },
+      "duathlon": {
+        "role": "tertiary",
+        "displayName": "Duathlon Plum",
+        "canonical": "#5c4a78",
+        "tonalRamp": [
+          "#120125",
+          "#2c1a44",
+          "#493764",
+          "#695786",
+          "#8a78a9",
+          "#ad9ace",
+          "#d2bef4",
+          "#f1eaff"
+        ]
+      },
+      "unspecified": {
+        "role": "tertiary",
+        "displayName": "Unspecified Dust",
+        "canonical": "#5c564c",
+        "tonalRamp": [
+          "#0f0a04",
+          "#2a241b",
+          "#474138",
+          "#666056",
+          "#888177",
+          "#aba499",
+          "#cfc8bd",
+          "#f5eee2"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Featured finish time on the board."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Distance name on the board."
+      },
+      "marker": {
+        "displayName": "Marker",
+        "purpose": "Distance code on a personal-best plate."
+      },
+      "time": {
+        "displayName": "Time",
+        "purpose": "Split times and the finish column."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Names, notes, filters, and dates."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Field labels and definition terms."
+      }
+    },
+    "shadows": [
+      {
+        "name": "shell",
+        "value": "0 4px 14px rgba(20, 36, 28, 0.16)",
+        "purpose": "Sticky green bar only, so the bar stays separate while it covers the gravel."
+      }
+    ],
+    "motion": [
+      {
+        "name": "chart-year",
+        "value": "600ms easeOutQuart",
+        "purpose": "Year bar chart. Off when prefers-reduced-motion is set."
+      },
+      {
+        "name": "chart-progress",
+        "value": "700ms easeOutQuart",
+        "purpose": "Progression line. Off when prefers-reduced-motion is set."
+      },
+      {
+        "name": "scroll",
+        "value": "smooth",
+        "purpose": "Document scroll. Becomes auto when prefers-reduced-motion is set."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "max-plate-scroll",
+        "value": "720px"
+      },
+      {
+        "name": "min-board",
+        "value": "800px"
+      },
+      {
+        "name": "min-sheet",
+        "value": "860px"
+      },
+      {
+        "name": "min-charts",
+        "value": "960px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The solid action. Used to clear filters when the sheet is empty.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Clear filters</button>",
+      "css": ".ds-btn-primary { background: var(--shell); color: var(--paper); padding: 0.4rem 0.85rem; min-height: 2.75rem; border: 1px solid var(--shell); border-radius: 2px; font-family: var(--text); font-weight: 700; font-size: 1.0625rem; cursor: pointer; }\n.ds-btn-primary:hover { background: var(--shell); color: var(--paper); }\n.ds-btn-primary:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }"
+    },
+    {
+      "name": "Discipline Toggle",
+      "kind": "button",
+      "refersTo": "button-toggle",
+      "description": "An outline choice for discipline. Pressed state fills with the shell green.",
+      "html": "<button class=\"ds-btn-toggle\" type=\"button\">Triathlon</button>",
+      "css": ".ds-btn-toggle { min-height: 2.75rem; padding: 0.35rem 0.8rem; background: transparent; color: var(--ink); border: 1px solid var(--ink); border-radius: 2px; font-family: var(--text); font-weight: 700; font-size: 1.0625rem; cursor: pointer; }\n.ds-btn-toggle:hover { background: transparent; }\n.ds-btn-toggle:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }"
+    },
+    {
+      "name": "Discipline Toggle Pressed",
+      "kind": "button",
+      "refersTo": "button-toggle-pressed",
+      "description": "The active discipline. Green fill, shell-paper type, no shadow.",
+      "html": "<button class=\"ds-btn-toggle-pressed\" type=\"button\" aria-pressed=\"true\">Ironman</button>",
+      "css": ".ds-btn-toggle-pressed { min-height: 2.75rem; padding: 0.35rem 0.8rem; background: var(--shell); color: var(--paper); border: 1px solid var(--shell); border-radius: 2px; font-family: var(--text); font-weight: 700; font-size: 1.0625rem; cursor: pointer; }\n.ds-btn-toggle-pressed:hover { background: var(--shell); color: var(--paper); }\n.ds-btn-toggle-pressed:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }"
+    },
+    {
+      "name": "Marker Plate",
+      "kind": "custom",
+      "refersTo": "marker-plate",
+      "description": "A personal-best kilometer plate. Specimen time, not a recorded result.",
+      "html": "<button class=\"ds-marker\" type=\"button\"><span class=\"ds-marker-code\">140.6</span><span class=\"ds-marker-name\">Ironman</span><span class=\"ds-marker-time\">12:34:56</span></button>",
+      "css": ".ds-marker { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 0.05rem; width: max-content; min-width: 5.8rem; min-height: 5.4rem; padding: 0.85rem 0.75rem 0.55rem; background: var(--plate); color: var(--ink); border: 2px solid var(--ink); border-radius: 2px; text-align: left; font-family: var(--text); cursor: pointer; }\n.ds-marker::before { content: \"\"; position: absolute; top: 0; left: 0; right: 0; height: 7px; background: var(--mark); }\n.ds-marker:hover { background: var(--plate); }\n.ds-marker:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }\n.ds-marker-code { margin-top: 0.2rem; font-family: var(--display); font-weight: 800; font-size: 1.7rem; line-height: 0.9; letter-spacing: -0.03em; }\n.ds-marker-name { font-size: 0.78rem; font-weight: 700; }\n.ds-marker-time { font-family: var(--display); font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Marker Plate Selected",
+      "kind": "custom",
+      "refersTo": "marker-plate",
+      "description": "The chosen distance. Same plate, with the ink ring. Specimen time, not a recorded result.",
+      "html": "<button class=\"ds-marker is-selected\" type=\"button\" aria-pressed=\"true\"><span class=\"ds-marker-code\">140.6</span><span class=\"ds-marker-name\">Ironman</span><span class=\"ds-marker-time\">12:34:56</span></button>",
+      "css": ".ds-marker { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 0.05rem; width: max-content; min-width: 5.8rem; min-height: 5.4rem; padding: 0.85rem 0.75rem 0.55rem; background: var(--plate); color: var(--ink); border: 2px solid var(--ink); border-radius: 2px; text-align: left; font-family: var(--text); cursor: pointer; }\n.ds-marker::before { content: \"\"; position: absolute; top: 0; left: 0; right: 0; height: 7px; background: var(--mark); }\n.ds-marker.is-selected, .ds-marker:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }\n.ds-marker:hover { background: var(--plate); }\n.ds-marker-code { margin-top: 0.2rem; font-family: var(--display); font-weight: 800; font-size: 1.7rem; line-height: 0.9; letter-spacing: -0.03em; }\n.ds-marker-name { font-size: 0.78rem; font-weight: 700; }\n.ds-marker-time { font-family: var(--display); font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "Plate-white search on a 1px ink edge. The label is the compact field style.",
+      "html": "<label class=\"ds-field\">Search<input class=\"ds-input\" type=\"search\" placeholder=\"Race name or notes\"></label>",
+      "css": ".ds-field { display: grid; gap: 0.28rem; font-family: var(--text); font-size: 0.8125rem; font-weight: 700; color: var(--ink); }\n.ds-input { width: 16rem; min-height: 2.75rem; padding: 0.4rem 0.7rem; background: var(--plate); color: var(--ink); border: 1px solid var(--ink); border-radius: 2px; font-family: var(--text); font-size: 1.0625rem; font-weight: 400; caret-color: var(--ink); }\n.ds-input::placeholder { color: var(--ink-soft); opacity: 1; }\n.ds-input:hover { border-color: var(--ink); }\n.ds-input:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }"
+    },
+    {
+      "name": "Shell Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Sticky roadside bar. The section in view takes a course-yellow underline.",
+      "html": "<header class=\"ds-shell\"><a class=\"ds-brand\" href=\"#bests\">Shane Drumm</a><nav class=\"ds-nav\" aria-label=\"Page\"><a href=\"#bests\" aria-current=\"true\">Bests</a><a href=\"#races\">Races</a><a href=\"#charts\">Charts</a></nav></header>",
+      "css": ".ds-shell { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4rem; padding: 0.4rem 1rem; background: var(--shell); color: var(--paper); box-shadow: var(--shadow); font-family: var(--text); }\n.ds-brand { font-family: var(--display); font-weight: 800; font-size: 1.85rem; letter-spacing: -0.03em; line-height: 1; color: var(--paper); text-decoration: none; }\n.ds-nav { display: flex; gap: 0.25rem 1rem; }\n.ds-nav a { color: var(--paper); font-weight: 600; text-decoration: none; padding: 0.35rem 0; font-size: 1.0625rem; }\n.ds-nav a:hover { color: var(--paper); }\n.ds-nav a[aria-current=\"true\"] { text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: var(--mark); text-underline-offset: 0.35em; }\n.ds-shell a:focus-visible { outline: 2px solid var(--mark); outline-offset: 3px; }"
+    },
+    {
+      "name": "Placeholder Chip",
+      "kind": "chip",
+      "refersTo": "chip-placeholder",
+      "description": "Marks a placeholder row in the sheet. Not a filter.",
+      "html": "<span class=\"ds-chip\">Placeholder</span>",
+      "css": ".ds-chip { display: inline-block; padding: 0.05rem 0.35rem; border: 1px solid var(--line); border-radius: 0; font-family: var(--text); font-size: 0.75rem; font-weight: 700; color: var(--ink-soft); background: transparent; }"
+    },
+    {
+      "name": "Race Row",
+      "kind": "custom",
+      "refersTo": "race-row",
+      "description": "A flush sheet row. Hover washes plate white; open fills the plate. Specimen time, not a recorded result.",
+      "html": "<div class=\"ds-sheet\"><button class=\"ds-race\" type=\"button\" aria-expanded=\"false\"><span class=\"ds-race-date\">12 Oct 2019</span><span class=\"ds-race-time\">12:34:56</span><span class=\"ds-race-chev\" aria-hidden=\"true\"><svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\"><path d=\"M3 6l5 5 5-5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"></path></svg></span><span class=\"ds-race-name\">Sample race</span><span class=\"ds-race-dist\">Ironman</span></button><button class=\"ds-race is-open\" type=\"button\" aria-expanded=\"true\"><span class=\"ds-race-date\">4 Jul 2021</span><span class=\"ds-race-time is-missing\">No time</span><span class=\"ds-race-chev\" aria-hidden=\"true\"><svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\"><path d=\"M3 6l5 5 5-5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"></path></svg></span><span class=\"ds-race-name\">Sample start <span class=\"ds-chip\">Placeholder</span></span><span class=\"ds-race-dist\">No distance</span></button></div>",
+      "css": ".ds-sheet { width: min(100%, 36rem); }\n.ds-race { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; column-gap: 0.75rem; row-gap: 0.1rem; align-items: center; width: 100%; padding: 0.75rem 0.15rem; background: transparent; color: var(--ink); border: 0; border-bottom: 1px solid var(--line); text-align: left; font-family: var(--text); font-size: 1.0625rem; cursor: pointer; }\n.ds-race:hover { background: rgba(247, 248, 244, 0.7); }\n.ds-race.is-open { border-bottom-color: transparent; background: var(--plate); }\n.ds-race.is-open:hover { background: var(--plate); }\n.ds-race:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }\n.ds-race-date { grid-column: 1; grid-row: 1; color: var(--ink-soft); font-size: 0.875rem; font-weight: 600; font-variant-numeric: tabular-nums; }\n.ds-race-time { grid-column: 2; grid-row: 1; font-family: var(--display); font-weight: 700; font-size: 1.45rem; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; text-align: right; }\n.ds-race-time.is-missing { font-family: var(--text); font-size: 0.95rem; font-weight: 700; color: var(--missing); letter-spacing: 0; }\n.ds-race-chev { grid-column: 3; grid-row: 1 / span 3; width: 1rem; height: 1rem; align-self: center; }\n.ds-race.is-open .ds-race-chev { transform: rotate(180deg); }\n.ds-race-name { grid-column: 1 / span 2; grid-row: 2; font-weight: 700; }\n.ds-race-dist { grid-column: 1 / span 2; grid-row: 3; font-size: 0.8125rem; font-weight: 700; color: var(--ink-soft); }\n.ds-chip { display: inline-block; margin-left: 0.4rem; padding: 0.05rem 0.35rem; border: 1px solid var(--line); font-family: var(--text); font-size: 0.75rem; font-weight: 700; color: var(--ink-soft); }"
+    },
+    {
+      "name": "Split Bar",
+      "kind": "custom",
+      "refersTo": "split-bar",
+      "description": "Swim, bike, and run shares for an Ironman or 70.3 best. Specimen clocks, not a recorded result.",
+      "html": "<div class=\"ds-splits\"><div class=\"ds-split-bar\" aria-hidden=\"true\"><i style=\"width: 22%; --segment: #0e6e78\"></i><i style=\"width: 51%; --segment: #1e4d8c\"></i><i style=\"width: 27%; --segment: #b23a2e\"></i></div><div class=\"ds-split-key\"><p style=\"--segment: #0e6e78\"><span><i class=\"ds-swatch\"></i>Swim</span><strong>1:23:45</strong></p><p style=\"--segment: #1e4d8c\"><span><i class=\"ds-swatch\"></i>Bike</span><strong>5:43:21</strong></p><p style=\"--segment: #b23a2e\"><span><i class=\"ds-swatch\"></i>Run</span><strong>3:21:09</strong></p></div></div>",
+      "css": ".ds-splits { font-family: var(--text); color: var(--ink); max-width: 36rem; }\n.ds-split-bar { display: flex; height: 0.8rem; gap: 3px; }\n.ds-split-bar i { display: block; min-width: 0.35rem; background: var(--segment, var(--ink)); }\n.ds-split-key { display: grid; grid-template-columns: repeat(3, minmax(7rem, 1fr)); gap: 0.75rem; margin-top: 0.55rem; }\n.ds-split-key p { margin: 0; }\n.ds-split-key span { display: block; font-size: 0.78rem; font-weight: 700; }\n.ds-swatch { display: inline-block; width: 0.7rem; height: 0.7rem; margin-right: 0.3rem; background: var(--segment, var(--ink)); vertical-align: -0.05rem; }\n.ds-split-key strong { font-family: var(--display); font-weight: 700; font-size: 1.45rem; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Kilometer Marker",
+    "overview": "The archive reads like a course. A dark green roadside shell holds the name and the section links, cool gravel covers the page, and personal bests are white plates you pick up one at a time. Each plate has a course-yellow reflector cap, a condensed distance code, and a finish time. Under the plates, one distance is featured on the board: the time in huge condensed numerals, then the race, the date, and the swim, bike, and run bar when the distance is an Ironman or a 70.3.\n\nThe rest of the page is a results browser: filters, a flush race sheet, and two charts, set in Barlow. Big Shoulders Display is reserved for times, distance codes, section titles, the wordmark, and chart captions. Both families are self-hosted in `fonts/` (display weights 800 and 700, Barlow weights 400, 600, and 700) under the SIL Open Font License. The page is light only (`color-scheme: light`). Course yellow stays scarce: the cap, the current-section underline, text selection, and the focus ring on the green bar.",
+    "keyCharacteristics": [
+      "Roadside green shell and colophon on cool gravel, with plate-white surfaces for markers, fields, and an open race.",
+      "Course yellow used as a 7px cap, the current-section underline, text selection, and the focus ring on the green bar.",
+      "Big Shoulders Display for times, distance codes, and section titles; Barlow for sentences, filters, and dates.",
+      "2px corners, a 2px ink ring for selection and focus, and one soft shadow under the sticky bar.",
+      "A separate ink for each discipline, with chart series that are out of view drawn at 28% opacity."
+    ],
+    "rules": [
+      {
+        "name": "The Reflector Rule",
+        "body": "Course yellow is a cap, an underline, a selection, or a focus ring on the green bar. It does not fill a button, a bar, or a page region.",
+        "section": "colors"
+      },
+      {
+        "name": "The Discipline Ink Rule",
+        "body": "Swim, bike, and run keep the split inks above. Each chart discipline uses its own ink from this list, and the Run series uses the shell green. A year-chart series that is not the one in view is drawn at 28% opacity. The series in view stays at full strength.",
+        "section": "colors"
+      },
+      {
+        "name": "The Numeral Rule",
+        "body": "A recorded finish, a split, and a distance code are Big Shoulders Display. Names, notes, filters, dates, and the words \"No time\" stay in Barlow.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sheet Rule",
+        "body": "Below 860px a race is a stacked row. At 860px and above it is one line: date, name, distance, discipline, finish, chevron.",
+        "section": "layout"
+      },
+      {
+        "name": "The One Shadow Rule",
+        "body": "The sticky shell is the only lifted surface. Plates, rows, fields, and the colophon stay flat. Depth comes from gravel, plate white, and the green band.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Squared Plate Rule",
+        "body": "Interactive surfaces use a 2px corner. Nothing in this system is a pill.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Ring Rule",
+        "body": "A selected marker uses the same 2px ink outline, offset 3px, as keyboard focus. Selection does not recolor the plate. On the green shell, focus swaps that outline to course yellow.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do paint the page gravel (`#e7ebe4`) and the sticky bar and colophon roadside green (`#16352c`).",
+      "Do cap a marker plate with a 7px course-yellow band and a 2px ink border on plate white.",
+      "Do set recorded finishes, splits, and distance codes in Big Shoulders Display, with tabular figures on the times.",
+      "Do keep controls at least 2.75rem tall, and draw keyboard focus as a 2px ink outline offset 3px.",
+      "Do draw a year-chart series that is out of view at 28% of its discipline ink, and draw the progression line as a 2px straight stroke with 5px square points and no fill.",
+      "Do load Big Shoulders Display (700 and 800) and Barlow (400, 600, and 700) from `fonts/` under the SIL Open Font License."
+    ],
+    "donts": [
+      "Don't fill a button, a chart bar, or a page region with course yellow (`#f0c400`).",
+      "Don't round plates, fields, or toggles past 2px, and don't put a shadow on them.",
+      "Don't set a recorded finish time in Barlow. Barlow is for the missing-time label.",
+      "Don't show a selected marker by recoloring the plate. The selected state is the ink ring.",
+      "Don't reuse the split swim teal (`#0e6e78`) for the Swim chart series (`#2a6f97`)."
+    ]
+  }
+}
