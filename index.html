@@ -14,10 +14,12 @@
   <header class="shell">
     <div class="wrap shell-bar">
       <h1 class="brand"><a href="#bests">Shane Drumm</a></h1>
-      <nav aria-label="Page">
+      <nav aria-label="Site">
         <a href="#bests">Bests</a>
         <a href="#races">Races</a>
         <a href="#charts">Charts</a>
+        <a href="training.html">Training</a>
+        <a href="reports.html">Reports</a>
       </nav>
     </div>
   </header>
@@ -65,11 +67,16 @@
         <div class="filter-actions">
           <div id="disciplines" class="disciplines" role="group" aria-label="Discipline"></div>
           <button type="button" id="parkrun-toggle" class="parkrun-toggle" aria-pressed="false">Parkrun</button>
+          <label class="field source-field">
+            Source
+            <select id="source" name="source">
+              <option value="all">All sources</option>
+              <option value="Notion">Notion</option>
+              <option value="parkrun">parkrun</option>
+              <option value="Strava (added 19 Oct 2026)">From Strava</option>
+            </select>
+          </label>
         </div>
-        <label class="check">
-          <input id="show-hidden" type="checkbox" name="placeholders">
-          Show placeholder rows
-        </label>
       </form>
       <div class="sheet-head" aria-hidden="true">
         <span>Date</span>
@@ -104,7 +111,7 @@
               <select id="chart-distance"></select>
             </label>
           </figcaption>
-          <p class="caption">Lower is a faster finish. The scale starts near the data.</p>
+          <p id="progress-caption" class="caption">Lower is a faster finish. The scale starts near the data. Official results only, so a Strava elapsed time stays off this line.</p>
           <div class="chart-frame">
             <canvas id="progress-chart"></canvas>
           </div>
@@ -120,7 +127,7 @@
 
   <footer class="colophon">
     <div class="wrap">
-      <p>Finish times are the values stored for each race. Two source rows — an empty record and a COVID YEAR placeholder — stay out of the list until you show placeholder rows.</p>
+      <p>Personal bests use official results. Races added from Strava keep the elapsed time in the list, with a from Strava badge, and stay out of the bests. Training volume and custom charts are on <a href="training.html">Training</a> and <a href="reports.html">Reports</a>.</p>
     </div>
   </footer>
 

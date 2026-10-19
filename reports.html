@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shane Drumm — Reports</title>
+  <meta name="description" content="Build a shareable training chart from Shane Drumm's Strava activities: metric, sport, date range, and bar or line.">
+  <meta name="theme-color" content="#16352C">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#report">Skip to the report</a>
+  <header class="shell">
+    <div class="wrap shell-bar">
+      <h1 class="brand"><a href="index.html">Shane Drumm</a></h1>
+      <nav aria-label="Site">
+        <a href="index.html">Races</a>
+        <a href="training.html">Training</a>
+        <a href="reports.html" aria-current="page">Reports</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p id="status" class="status" role="status">Loading activities.</p>
+    <noscript>
+      <p class="status">This page reads the activity file in the browser. Enable JavaScript, and open the folder through a local web server rather than as a file.</p>
+    </noscript>
+
+    <section id="report" class="section" aria-labelledby="report-heading" hidden>
+      <h2 id="report-heading">Reports</h2>
+      <p class="lede">Pick a metric, a period, and a sport. The address bar keeps the choice, so the chart can be bookmarked or sent as a link. Duplicate uploads are left out.</p>
+      <form id="report-form" class="filters" role="search">
+        <div class="report-controls">
+          <label class="field">
+            Metric
+            <select id="metric" name="metric">
+              <option value="km">Kilometres</option>
+              <option value="hours">Hours</option>
+              <option value="count">Activities</option>
+              <option value="elevation">Elevation (m)</option>
+              <option value="hr">Average heart rate</option>
+              <option value="effort">Relative effort</option>
+            </select>
+          </label>
+          <label class="field">
+            Group by
+            <select id="group" name="group">
+              <option value="week">Week</option>
+              <option value="month">Month</option>
+              <option value="year">Year</option>
+            </select>
+          </label>
+          <label class="field">
+            Sport
+            <select id="sport" name="sport"></select>
+          </label>
+          <label class="field">
+            Chart
+            <select id="chart-type" name="chart">
+              <option value="bar">Bar</option>
+              <option value="line">Line</option>
+            </select>
+          </label>
+          <label class="field">
+            From
+            <input id="from" name="from" type="date" required>
+          </label>
+          <label class="field">
+            To
+            <input id="to" name="to" type="date" required>
+          </label>
+        </div>
+        <div class="choices">
+          <button type="button" id="download" class="solid">Download CSV</button>
+        </div>
+      </form>
+      <figure>
+        <figcaption id="report-title">Report</figcaption>
+        <p id="report-caption" class="caption"></p>
+        <div class="chart-scroll">
+          <div class="chart-frame">
+            <canvas id="report-chart" aria-label="Custom training report"></canvas>
+          </div>
+        </div>
+        <p id="chart-fallback" class="caption" hidden></p>
+        <details>
+          <summary>Numbers in this chart</summary>
+          <div id="report-table" class="table-scroll"></div>
+        </details>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <div class="wrap">
+      <p>Hours are moving time. Heart rate is the mean of activities in the period that recorded one. Relative effort and elevation are sums. The chart is computed in the browser from <code>data/activities.json</code>.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js"></script>
+  <script src="archive.js"></script>
+  <script src="reports.js"></script>
+</body>
+</html>

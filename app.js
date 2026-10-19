@@ -56,14 +56,15 @@
   ];
 
   const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const STRAVA_SOURCE = "Strava (added 19 Oct 2026)";
 
   const state = {
     discipline: "all",
     distance: "all",
     year: "all",
+    source: "all",
     query: "",
     sort: "date-desc",
-    showHidden: false,
     chartDistance: "Ironman",
     parkrun: false,
     openId: null,
@@ -83,8 +84,9 @@
     year: document.getElementById("year"),
     sort: document.getElementById("sort"),
     query: document.getElementById("query"),
-    showHidden: document.getElementById("show-hidden"),
+    source: document.getElementById("source"),
     parkrun: document.getElementById("parkrun-toggle"),
+    progressCaption: document.getElementById("progress-caption"),
     list: document.getElementById("list"),
     chartDistance: document.getElementById("chart-distance"),
     yearCaption: document.getElementById("year-caption"),
@@ -112,10 +114,8 @@
     return String(value);
   }
 
-  function isPlaceholder(race) {
-    const name = (race.race_name || "").trim();
-    if (!name) return true;
-    return name.toUpperCase() === "COVID YEAR";
+  function officialResult(race) {
+    return race.source !== STRAVA_SOURCE;
   }
 
   function formatDate(iso) {
@@ -158,7 +158,7 @@
   function personalBests(rows) {
     const best = new Map();
     rows.forEach((race) => {
-      if (isPlaceholder(race)) return;
+      if (!officialResult(race)) return;
       if (race.finish_seconds == null || !race.distance) return;
       const current = best.get(race.distance);
       if (!current || race.finish_seconds < current.finish_seconds) best.set(race.distance, race);
@@ -173,18 +173,20 @@
     return ordered;
   }
 
-  function realRaces() {
-    return races.filter((race) => !isPlaceholder(race));
+  function chartRows() {
+    if (state.source === "all") return races;
+    return races.filter((race) => race.source === state.source);
   }
 
-  function archivePool() {
-    return state.showHidden ? races : realRaces();
+  function progressionRows() {
+    return chartRows().filter((race) => state.source === STRAVA_SOURCE || officialResult(race));
   }
 
   function filteredRaces() {
     const q = state.query.trim().toLowerCase();
-    return archivePool()
+    return races
       .filter((race) => {
+        if (state.source !== "all" && race.source !== state.source) return false;
         if (state.discipline !== "all" && (race.discipline || "Unspecified") !== state.discipline) return false;
         if (state.distance !== "all" && race.distance !== state.distance) return false;
         if (state.parkrun && !isParkrun(race)) return false;
@@ -298,7 +300,7 @@
   }
 
   function renderChrome() {
-    const pool = realRaces();
+    const pool = races;
     const disciplines = uniqueSorted(pool.map((race) => race.discipline), DISCIPLINE_ORDER);
     const distances = uniqueSorted(pool.map((race) => race.distance), DISTANCE_ORDER);
     const years = uniqueSorted(pool.map((race) => (race.date || "").slice(0, 4))).sort();
@@ -321,11 +323,11 @@
     els.distance.value = distances.includes(state.distance) || state.distance === "all" ? state.distance : "all";
     els.year.value = state.year;
     els.sort.value = state.sort;
-    els.showHidden.checked = state.showHidden;
+    if (els.source) els.source.value = state.source;
     if (els.parkrun) els.parkrun.setAttribute("aria-pressed", String(state.parkrun));
 
     const timed = uniqueSorted(
-      pool.filter((race) => race.finish_seconds != null).map((race) => race.distance),
+      pool.filter((race) => officialResult(race) && race.finish_seconds != null).map((race) => race.distance),
       DISTANCE_ORDER
     );
     els.chartDistance.replaceChildren();
@@ -340,9 +342,10 @@
     const dated = pool.filter((race) => race.date).sort((a, b) => a.date.localeCompare(b.date));
     const first = dated[0];
     const last = dated[dated.length - 1];
+    const fromStrava = races.filter((race) => !officialResult(race)).length;
     els.lede.textContent = dated.length
-      ? "Fastest recorded finish in each distance, from " + first.race_name + " on " + formatDate(first.date) + " to " + last.race_name + " on " + formatDate(last.date) + ". Choose a marker to list only that distance."
-      : "Fastest recorded finish in each distance.";
+      ? "Fastest official finish in each distance. The archive runs from " + first.race_name + " on " + formatDate(first.date) + " to " + last.race_name + " on " + formatDate(last.date) + ". " + fromStrava + " races added from Strava use an elapsed time: they stay in the list, with a from Strava badge, and out of these bests. Choose a marker to list only that distance."
+      : "Fastest official finish in each distance.";
   }
 
   function renderPosts() {
@@ -481,6 +484,7 @@
       ["Run", race.run],
       ["Location", race.location],
       ["Position / placing", race.position],
+      ["Source", race.source === STRAVA_SOURCE ? "Strava (elapsed time)" : race.source],
       ["Notion title", race.notion_title],
       ["Raw times", race.raw_times],
     ];
@@ -506,8 +510,24 @@
     } else {
       side.append(el("p", "data-note", "No notes recorded."));
     }
+    const activityIds = [];
+    const seenIds = new Set();
+    (race.strava_activity_ids || []).forEach((id) => {
+      const key = String(id);
+      if (!key || seenIds.has(key)) return;
+      seenIds.add(key);
+      activityIds.push(key);
+    });
     const links = el("ul", "links");
-    if (race.link) {
+    activityIds.forEach((id, index) => {
+      const item = el("li");
+      const link = externalLink("https://www.strava.com/activities/" + id, activityIds.length > 1 ? "Strava " + (index + 1) : "Strava");
+      link.setAttribute("aria-label", "Strava activity " + id);
+      item.append(link);
+      links.append(item);
+    });
+    const linkIsListed = activityIds.some((id) => String(race.link || "").indexOf("/activities/" + id) !== -1);
+    if (race.link && !linkIsListed) {
       const item = el("li");
       const label = /strava\.com/i.test(race.link) ? "Strava" : /parkrun\./i.test(race.link) ? "Parkrun" : "Link";
       item.append(externalLink(race.link, label));
@@ -524,6 +544,12 @@
       links.append(item);
     }
     if (links.childElementCount) side.append(links);
+    if (!officialResult(race)) {
+      const elapsed = el("p", "data-note");
+      elapsed.append(el("strong", null, "From Strava. "));
+      elapsed.append(document.createTextNode("This finish time is the Strava elapsed time, not an official result, so it is left out of the personal bests."));
+      side.append(elapsed);
+    }
     if (race.data_issues) {
       const note = el("p", "data-note");
       note.append(el("strong", null, "Data note. "));
@@ -536,7 +562,6 @@
 
   function renderList(options) {
     const rows = filteredRaces();
-    const hiddenCount = races.length - realRaces().length;
     if (!rows.length) {
       const empty = el("div", "empty");
       empty.append(el("p", null, "No races match this search and these filters."));
@@ -546,6 +571,7 @@
         state.discipline = "all";
         state.distance = "all";
         state.year = "all";
+        state.source = "all";
         state.parkrun = false;
         state.query = "";
         els.query.value = "";
@@ -558,8 +584,7 @@
       const first = rows[0];
       const last = rows[rows.length - 1];
       const spanText = (first.race_name || "Untitled") + ", " + formatDate(first.date) + " through " + (last.race_name || "Untitled") + ", " + formatDate(last.date);
-      const hiddenText = !state.showHidden && hiddenCount ? " " + hiddenCount + " placeholder rows are hidden." : "";
-      els.span.textContent = rows.length + (rows.length === 1 ? " race. " : " races. ") + spanText + "." + hiddenText;
+      els.span.textContent = rows.length + (rows.length === 1 ? " race. " : " races. ") + spanText + ".";
 
       const list = el("ul", "race-list");
       rows.forEach((race) => {
@@ -571,7 +596,7 @@
         button.setAttribute("aria-controls", "detail-" + race._id);
         button.append(el("span", "c-date", formatDate(race.date)));
         const name = el("span", "c-name", race.race_name || "Untitled row");
-        if (isPlaceholder(race)) name.append(el("span", "tag", "Placeholder"));
+        if (!officialResult(race)) name.append(el("span", "tag", "from Strava"));
         button.append(name);
         button.append(el("span", "c-dist", race.distance || "No distance"));
         button.append(el("span", "c-disc", race.discipline || "No discipline"));
@@ -603,10 +628,6 @@
       const focused = els.list.querySelector('[aria-controls="detail-' + options.focusId + '"]');
       if (focused) focused.focus();
     }
-  }
-
-  function chartRows() {
-    return archivePool();
   }
 
   function activeDiscipline() {
@@ -649,7 +670,12 @@
     });
     renderYearTable(years, disciplines, counts);
     const quiet = highlight ? " The " + highlight + " series is the distance in view. Other disciplines stay on the chart, quieter." : "";
-    els.yearCaption.textContent = "Every race in the archive, including starts with no finish time." + quiet;
+    const sourceNote = state.source === STRAVA_SOURCE
+      ? " Showing races added from Strava."
+      : state.source === "all"
+        ? " Official results and races added from Strava."
+        : " Showing " + state.source + " races.";
+    els.yearCaption.textContent = "Races in the archive, including starts with no finish time." + sourceNote + quiet;
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (!window.Chart) {
@@ -695,9 +721,14 @@
       yearChart = new Chart(document.getElementById("year-chart"), { type: "bar", data: yearData, options: yearOptions });
     }
 
-    const series = pool
+    const series = progressionRows()
       .filter((race) => race.distance === state.chartDistance && race.finish_seconds != null && race.date)
       .sort((a, b) => a.date.localeCompare(b.date));
+    if (els.progressCaption) {
+      els.progressCaption.textContent = state.source === STRAVA_SOURCE
+        ? "Lower is a faster finish, and the scale starts near the data. These are Strava elapsed times, not official results."
+        : "Lower is a faster finish, and the scale starts near the data. Official results only, so a Strava elapsed time stays off this line.";
+    }
     const progressList = el("ul", "plain-list");
     if (!series.length) {
       progressList.append(el("li", null, "No finish time for " + state.chartDistance + "."));
@@ -797,10 +828,9 @@
       state.sort = els.sort.value;
       renderList();
     });
-    els.showHidden.addEventListener("change", () => {
-      state.showHidden = els.showHidden.checked;
-      renderList();
-      renderCharts();
+    els.source.addEventListener("change", () => {
+      state.source = els.source.value;
+      renderAll();
     });
     els.parkrun.addEventListener("click", () => {
       state.parkrun = !state.parkrun;
