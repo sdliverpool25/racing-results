@@ -28,13 +28,13 @@ Results are maintained in Notion: the "Races" and "Strava Activities" databases 
 
 ## Capabilities and Constraints
 
-- Show a personal best per distance from `finish_seconds`, with the race and date. Ironman and 70.3 bests include swim, bike, and run splits.
-- Search by name and notes. Filter by discipline, distance, and year. Sort by date or finish time.
+- Show a personal best per distance from `finish_seconds`, with the race and date. Leave out `source` `Strava (added 19 Oct 2026)`. Ironman and 70.3 bests include swim, bike, and run splits.
+- Search by name and notes. Filter by discipline, distance, year, and source. Sort by date or finish time. Strava-detected races show a from Strava badge and their linked activities.
 - Open a race to see splits, notes, Strava and Notion links, and any data-issues note.
-- Charts: races per year by discipline, and finish time over years for a chosen distance.
-- Hide the empty row and the "COVID YEAR" placeholder unless the reader asks to see them.
+- Charts: races per year by discipline, and official finish time over years for a chosen distance.
+- Training dashboard and a shareable report builder, both from the Strava export, excluding duplicate uploads.
 - The site must not contain a Notion token or any other secret. The public data must not include activity descriptions, UTC timestamps, or start times finer than the hour. No GitHub Action that needs secrets.
-- 81 records in the export: 79 real races (including 22 parkruns at 5K), one empty row, one placeholder.
+- 97 races: 79 from the original archive (including 22 parkruns) and 18 detected in Strava. 1,976 activities, 4 of them duplicates.
 
 ## Brand Commitments
 
@@ -46,7 +46,7 @@ The page is for Shane Drumm and should feel clean, sporty, and modern. No separa
 
 ## Product Principles
 
-- The recorded time wins. Personal bests are the minimum `finish_seconds` in each distance, not a hand-picked highlight.
+- The recorded official time wins. Personal bests are the minimum `finish_seconds` in each distance among races that are not Strava elapsed times.
 - Show data problems quietly. They belong to the race, not to a warning banner over the archive.
 - Keep the public site static. Refresh is a deliberate local step.
 - A race with no finish time is still a race. It stays in the list and out of the bests.

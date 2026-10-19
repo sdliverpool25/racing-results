@@ -4,10 +4,12 @@ A static archive of Shane Drumm's running, triathlon, Ironman, cycling, and swim
 
 Open the site and you get:
 
-- Personal bests: the fastest `finish_seconds` in each distance, with the race and date. Only official results should count: leave out rows whose `source` is `Strava (added 19 Oct 2026)`. The v1 `app.js` does not filter on `source` yet, so until the v2 UI lands it would show the 9.98 km Walyunga trail run as the Trail best. Ironman and 70.3 bests include swim, bike, and run splits.
-- Every race in a list you can search (name and notes), filter (discipline, distance, year), and sort (date or finish time).
-- A race row that opens onto splits, notes, Strava and Notion links, and any data note from the source.
-- Two charts: races per year by discipline, and finish time across years for a chosen distance.
+- Personal bests: the fastest `finish_seconds` in each distance, with the race and date. Official results only: rows whose `source` is `Strava (added 19 Oct 2026)` stay out of the bests, because that time is a Strava elapsed time. Counting them would show the 9.98 km Walyunga trail run as the Trail best. Ironman and 70.3 bests include swim, bike, and run splits.
+- Every race in a list you can search (name and notes), filter (discipline, distance, year, source), and sort (date or finish time). Strava-detected races carry a **from Strava** badge. There is no placeholder toggle.
+- A race row that opens onto splits, notes, each linked Strava activity, the Notion page, and any data note from the source.
+- Two charts: races per year by discipline, and finish time across years for a chosen distance. The finish-time chart uses official results unless the source filter is set to From Strava.
+- **Training** (`training.html`): weekly and monthly volume stacked by sport, a date range (last 12 weeks, last 12 months, all time, or one year), year-on-year totals, run pace and average heart rate, a sport-by-year table, run bests labelled whole-activity pace, and a searchable activity list. Duplicate uploads (`dup` = 1) are excluded. A yellow diamond marks a period that includes a race.
+- **Reports** (`reports.html`): pick a metric (kilometres, hours, count, elevation, average heart rate, relative effort), group by week, month, or year, filter by sport and date, and choose a bar or line. The choice is stored in the query string (`metric`, `group`, `sport`, `from`, `to`, `chart`) so a report can be bookmarked. Download CSV writes the rows in the chart.
 
 The export has 97 races: 79 from the original archive (including 22 parkruns) and 18 events detected in Shane's Strava history (`source` = `Strava (added 19 Oct 2026)`; their finish time is the Strava elapsed time, not an official result). There are no placeholder rows any more; the empty row and the `COVID YEAR` row were not carried into Notion. The **Parkrun** toggle lists the 22 parkrun 5Ks and points the finish-time chart at them.
 
@@ -110,7 +112,7 @@ This file is precomputed from non-duplicate activities:
 
 ## Layout
 
-- `index.html`, `styles.css`, `app.js` — the site
+- `index.html`, `training.html`, `reports.html`, `styles.css`, `app.js`, `training.js`, `reports.js`, `archive.js` — the site
 - `data/races.json`, `data/activities.json`, `data/aggregates.json` — the static exports the page reads
 - `scripts/refresh_from_notion.py` — regenerates them from Notion
 - `tests/check_archive.py` — locks counts, links, privacy and the personal bests

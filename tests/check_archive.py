@@ -118,12 +118,37 @@ def check_aggregates(rows):
         assert act["moving_s"] / act["km"] >= AGG["run_bests"]["min_plausible_pace_s"]
 
 
+def check_pages():
+    """The static pages have to apply the same personal-best rule as this file."""
+    app = (ROOT / "app.js").read_text(encoding="utf-8")
+    index = (ROOT / "index.html").read_text(encoding="utf-8")
+    training_js = (ROOT / "training.js").read_text(encoding="utf-8")
+    training = (ROOT / "training.html").read_text(encoding="utf-8")
+    reports = (ROOT / "reports.js").read_text(encoding="utf-8")
+    archive = (ROOT / "archive.js").read_text(encoding="utf-8")
+    assert "function officialResult" in app
+    assert STRAVA_SOURCE in app
+    assert "from Strava" in app
+    assert "strava_activity_ids" in app
+    assert "show-hidden" not in index and "Show placeholder" not in index
+    assert "training.html" in index and "reports.html" in index
+    assert 'id="source"' in index
+    assert "whole-activity pace" in training_js
+    assert "run_bests" in training_js and "dup" in archive
+    assert "Race days only" in training
+    for key in ("metric", "group", "sport", "from", "to", "chart"):
+        assert key in reports
+    assert "text/csv" in reports
+    assert "URLSearchParams" in reports
+
+
 def main():
     check_races()
     rows = check_activities()
     check_aggregates(rows)
+    check_pages()
     print("archive ok: 97 races (18 from Strava), 15 personal bests, 22 parkruns; "
-          "1976 activities, 157 race links; aggregates consistent")
+          "1976 activities, 157 race links; aggregates consistent; pages exclude Strava elapsed times from bests")
 
 
 if __name__ == "__main__":

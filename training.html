@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shane Drumm — Training</title>
+  <meta name="description" content="Shane Drumm's training log: volume by sport, year-on-year totals, run pace, and every Strava activity.">
+  <meta name="theme-color" content="#16352C">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#volume">Skip to volume</a>
+  <header class="shell">
+    <div class="wrap shell-bar">
+      <h1 class="brand"><a href="index.html">Shane Drumm</a></h1>
+      <nav aria-label="Site">
+        <a href="index.html">Races</a>
+        <a href="training.html" aria-current="page">Training</a>
+        <a href="reports.html">Reports</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p id="status" class="status" role="status">Loading the training log.</p>
+    <noscript>
+      <p class="status">This page reads the activity files in the browser. Enable JavaScript, and open the folder through a local web server rather than as a file.</p>
+    </noscript>
+
+    <section id="bests" class="section" aria-labelledby="bests-heading" hidden>
+      <h2 id="bests-heading">Run bests</h2>
+      <p id="bests-lede" class="lede"></p>
+      <div id="bests-posts" class="posts"></div>
+    </section>
+
+    <section id="volume" class="section" aria-labelledby="volume-heading" hidden>
+      <h2 id="volume-heading">Volume</h2>
+      <p id="volume-lede" class="lede"></p>
+      <div class="choices" role="group" aria-label="Date range">
+        <button type="button" class="choice" data-range="12w">Last 12 weeks</button>
+        <button type="button" class="choice" data-range="12m" aria-pressed="true">Last 12 months</button>
+        <button type="button" class="choice" data-range="all">All time</button>
+        <label class="field source-field">
+          Year
+          <select id="year-range">
+            <option value="">Choose a year</option>
+          </select>
+        </label>
+      </div>
+      <div class="choices" role="group" aria-label="Unit">
+        <button type="button" class="choice" data-unit="hours" aria-pressed="true">Hours</button>
+        <button type="button" class="choice" data-unit="km">Kilometres</button>
+      </div>
+      <p id="range-summary" class="caption"></p>
+      <div class="chart-grid">
+        <figure>
+          <figcaption>Weekly</figcaption>
+          <p id="week-caption" class="caption"></p>
+          <div class="chart-scroll">
+            <div class="chart-frame">
+              <canvas id="week-chart" aria-label="Weekly volume stacked by sport"></canvas>
+            </div>
+          </div>
+        </figure>
+        <figure>
+          <figcaption>Monthly</figcaption>
+          <p id="month-caption" class="caption"></p>
+          <div class="chart-scroll">
+            <div class="chart-frame">
+              <canvas id="month-chart" aria-label="Monthly volume stacked by sport"></canvas>
+            </div>
+          </div>
+        </figure>
+        <figure>
+          <figcaption>Year on year</figcaption>
+          <p id="yoy-caption" class="caption"></p>
+          <div class="chart-scroll">
+            <div class="chart-frame">
+              <canvas id="yoy-chart" aria-label="Year on year totals by sport"></canvas>
+            </div>
+          </div>
+        </figure>
+        <figure>
+          <figcaption>Run pace and heart rate</figcaption>
+          <p id="trend-caption" class="caption"></p>
+          <div class="chart-scroll">
+            <div class="chart-frame">
+              <canvas id="trend-chart" aria-label="Run pace and average heart rate"></canvas>
+            </div>
+          </div>
+          <p id="chart-fallback" class="caption" hidden></p>
+        </figure>
+      </div>
+    </section>
+
+    <section id="breakdown" class="section" aria-labelledby="breakdown-heading" hidden>
+      <h2 id="breakdown-heading">Sport by year</h2>
+      <p class="lede">Moving time and distance for each sport and year. Duplicate uploads are excluded.</p>
+      <div id="matrix" class="table-scroll"></div>
+    </section>
+
+    <section id="activities" class="section" aria-labelledby="activities-heading" hidden>
+      <h2 id="activities-heading">Activities</h2>
+      <p id="activities-lede" class="lede"></p>
+      <form id="activity-filters" class="filters" role="search">
+        <div class="filters-row">
+          <label class="field">
+            Search
+            <input id="activity-query" type="search" name="q" placeholder="Activity name" autocomplete="off" enterkeyhint="search">
+          </label>
+          <label class="field">
+            Sport
+            <select id="activity-type" name="type"></select>
+          </label>
+          <label class="field">
+            Year
+            <select id="activity-year" name="year"></select>
+          </label>
+          <label class="field">
+            Sort
+            <select id="activity-sort" name="sort">
+              <option value="date-desc">Newest first</option>
+              <option value="date-asc">Oldest first</option>
+              <option value="km-desc">Longest distance</option>
+              <option value="hours-desc">Longest moving time</option>
+            </select>
+          </label>
+        </div>
+        <label class="check">
+          <input id="race-only" type="checkbox" name="race">
+          Race days only
+        </label>
+      </form>
+      <div id="activity-table" class="table-scroll"></div>
+      <div id="pager" class="pager"></div>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <div class="wrap">
+      <p>Volume is moving time from the Strava export. Duplicate uploads are left out. Run bests are whole-activity pace, not a race result and not a Strava best effort. Build a different cut on <a href="reports.html">Reports</a>.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js"></script>
+  <script src="archive.js"></script>
+  <script src="training.js"></script>
+</body>
+</html>

@@ -187,6 +187,7 @@ a {
 
 .shell nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.25rem 1rem;
 }
 
@@ -197,7 +198,7 @@ a {
   padding: 0.35rem 0;
 }
 
-.shell nav a[aria-current="true"] {
+.shell nav a[aria-current] {
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-decoration-color: var(--mark);
@@ -421,6 +422,7 @@ a {
 }
 
 input[type="search"],
+input[type="date"],
 select {
   width: 100%;
   min-height: 2.75rem;
@@ -859,4 +861,142 @@ summary {
   .c-chev {
     transition: none;
   }
+}
+
+a.post {
+  text-decoration: none;
+}
+
+#bests-posts .post-name {
+  white-space: normal;
+  max-width: 14rem;
+}
+
+.source-field {
+  min-width: 11rem;
+}
+
+.filter-actions .source-field,
+.choices .source-field {
+  flex: 1 1 11rem;
+  max-width: 16rem;
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+  margin-top: 0.85rem;
+}
+
+.choice,
+.solid {
+  min-height: 2.75rem;
+  padding: 0.35rem 0.8rem;
+  background: transparent;
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  font-weight: 700;
+}
+
+.choice[aria-pressed="true"],
+.solid {
+  background: var(--shell);
+  border-color: var(--shell);
+  color: var(--paper);
+}
+
+.solid {
+  cursor: pointer;
+}
+
+.chart-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.report-controls {
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
+}
+
+.table-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+  margin-top: 0.8rem;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.92rem;
+}
+
+.data-table th,
+.data-table td {
+  padding: 0.45rem 0.55rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.data-table th {
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.data-table .num {
+  text-align: right;
+}
+
+.data-table .wrap-name {
+  white-space: normal;
+  min-width: 12rem;
+}
+
+.cell-main,
+.cell-sub {
+  display: block;
+}
+
+.cell-sub {
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+}
+
+.matrix th:first-child,
+.matrix td:first-child,
+.activity-table th:first-child,
+.activity-table td:first-child {
+  position: sticky;
+  left: 0;
+  background: var(--ground);
+  z-index: 1;
+}
+
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 0.9rem;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+
+.pager-label {
+  margin: 0;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.choice:disabled {
+  opacity: 0.45;
+}
+
+.colophon a,
+.colophon code {
+  color: var(--paper);
 }
