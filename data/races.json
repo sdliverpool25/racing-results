@@ -24,7 +24,44 @@
     "notion_title": null,
     "raw_times": "Total Time=442",
     "notion_page": "https://app.notion.com/9df4e139810f4dc3aa4a61bdc9afe0ec",
-    "data_issues": "total '442' read as 4:42 (h:mm without separator)"
+    "data_issues": "total '442' read as 4:42 (h:mm without separator)",
+    "id": "rr:1",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "75598789"
+    ]
+  },
+  {
+    "race_name": "Duhallow Sportive!",
+    "date": "2014-07-26",
+    "discipline": "Cycling",
+    "distance": "Gran Fondo",
+    "distance_km": 103.66,
+    "distance_original": null,
+    "event_type": "Gran Fondo",
+    "race_category": "Gran Fondo",
+    "finish_time": "4:32:38",
+    "finish_seconds": 16358,
+    "swim": null,
+    "t1": null,
+    "bike": "4:32:38",
+    "t2": null,
+    "run": null,
+    "location": null,
+    "position": null,
+    "notes": "Detected in Strava (activity 171080564). Finish time = Strava elapsed time; moving time 3:57:25. Not an official result.",
+    "link": "https://www.strava.com/activities/171080564",
+    "strava_bike": null,
+    "strava_bike_label": null,
+    "notion_title": null,
+    "raw_times": null,
+    "notion_page": null,
+    "data_issues": null,
+    "id": "strava:171080564",
+    "source": "Strava (added 19 Oct 2026)",
+    "strava_activity_ids": [
+      "171080564"
+    ]
   },
   {
     "race_name": "Leinster Loop",
@@ -51,7 +88,12 @@
     "notion_title": null,
     "raw_times": "Total Time=545",
     "notion_page": "https://app.notion.com/a81ae50754e5439396e30c44b94ede44",
-    "data_issues": "total '545' read as 5:45 (h:mm without separator)"
+    "data_issues": "total '545' read as 5:45 (h:mm without separator)",
+    "id": "rr:2",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "305617097"
+    ]
   },
   {
     "race_name": "Wicklow 200",
@@ -78,7 +120,12 @@
     "notion_title": "Gran Fondo - 200km 2830m",
     "raw_times": "Total Time=9.2",
     "notion_page": "https://app.notion.com/bc3c335d54294a1d8c50a2520eb88a76",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:3",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "320481630"
+    ]
   },
   {
     "race_name": "Ring of Kerry",
@@ -105,7 +152,12 @@
     "notion_title": "Gran Fondo - 200km",
     "raw_times": "Total Time=8.14",
     "notion_page": "https://app.notion.com/ad262a47f0f0444fbc706e0e2d395794",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:4",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "339066401"
+    ]
   },
   {
     "race_name": "Rebel Tour",
@@ -132,7 +184,44 @@
     "notion_title": null,
     "raw_times": "Total Time=547",
     "notion_page": "https://app.notion.com/05dc36993d7d49a19a15c3a626b1895c",
-    "data_issues": "total '547' read as 5:47 (h:mm without separator)"
+    "data_issues": "total '547' read as 5:47 (h:mm without separator)",
+    "id": "rr:5",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "390831251"
+    ]
+  },
+  {
+    "race_name": "Darkness into Light",
+    "date": "2017-04-01",
+    "discipline": "Run",
+    "distance": null,
+    "distance_km": 4.77,
+    "distance_original": null,
+    "event_type": "Charity / Fun Run",
+    "race_category": "Fun Run",
+    "finish_time": "0:28:20",
+    "finish_seconds": 1700,
+    "swim": null,
+    "t1": null,
+    "bike": null,
+    "t2": null,
+    "run": "0:28:20",
+    "location": null,
+    "position": null,
+    "notes": "Detected in Strava (activity 972560052). Finish time = Strava elapsed time; moving time 0:26:46. Not an official result.",
+    "link": "https://www.strava.com/activities/972560052",
+    "strava_bike": null,
+    "strava_bike_label": null,
+    "notion_title": null,
+    "raw_times": null,
+    "notion_page": null,
+    "data_issues": null,
+    "id": "strava:972560052",
+    "source": "Strava (added 19 Oct 2026)",
+    "strava_activity_ids": [
+      "972560052"
+    ]
   },
   {
     "race_name": "Sunsmart Series Whitford Nodes Sprint",
@@ -159,7 +248,10 @@
     "notion_title": "Triathlon - Sprint",
     "raw_times": "Total Time=1.44; Swim Time=22; Bike Time=46; Run Time=29",
     "notion_page": "https://app.notion.com/4abb94703cc04f0fba43dbd0afab71ef",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:6",
+    "source": "Notion",
+    "strava_activity_ids": []
   },
   {
     "race_name": "Kalamunda 100",
@@ -186,7 +278,12 @@
     "notion_title": "Gran Fondo - 100km 1900m",
     "raw_times": "Total Time=5.14",
     "notion_page": "https://app.notion.com/6e2d1a1322624ba1adc8697b34734dac",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:7",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "1424579670"
+    ]
   },
   {
     "race_name": "Twomeys Rockchapel Cycle 55k",
@@ -213,7 +310,12 @@
     "notion_title": "Gran Fondo - 55km 600m",
     "raw_times": null,
     "notion_page": "https://app.notion.com/116e6329323580469ec9fac3e3d41e1e",
-    "data_issues": "no time recorded"
+    "data_issues": "no time recorded",
+    "id": "rr:8",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "1628948489"
+    ]
   },
   {
     "race_name": "City to Surf 12km",
@@ -240,7 +342,12 @@
     "notion_title": "Run - 12km",
     "raw_times": "Total Time=1.15",
     "notion_page": "https://app.notion.com/e74c359a58b04ebe913bce748ab0f09b",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:9",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "1797555166"
+    ]
   },
   {
     "race_name": "Canola Classic 54km",
@@ -267,7 +374,12 @@
     "notion_title": null,
     "raw_times": null,
     "notion_page": "https://app.notion.com/255e6329323580a8a5f5dc9d258fd5e5",
-    "data_issues": "no time recorded"
+    "data_issues": "no time recorded",
+    "id": "rr:10",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "1810798044"
+    ]
   },
   {
     "race_name": "Yokine parkrun #50",
@@ -294,7 +406,10 @@
     "notion_title": null,
     "raw_times": "email time=0:28:00",
     "notion_page": null,
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:59",
+    "source": "parkrun",
+    "strava_activity_ids": []
   },
   {
     "race_name": "Joondalup Lake Half",
@@ -321,7 +436,12 @@
     "notion_title": "Run - Half Marathon",
     "raw_times": "Total Time=2.07; Run Time=2.07",
     "notion_page": "https://app.notion.com/ad04c7aa16ac4ec483639199ae5a6343",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:11",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "1983128565"
+    ]
   },
   {
     "race_name": "Yokine parkrun #59",
@@ -348,7 +468,12 @@
     "notion_title": null,
     "raw_times": "email time=0:27:39",
     "notion_page": null,
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:60",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "2055989984"
+    ]
   },
   {
     "race_name": "Yokine parkrun #60",
@@ -375,7 +500,12 @@
     "notion_title": null,
     "raw_times": "email time=0:27:18",
     "notion_page": null,
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:61",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "2072037006"
+    ]
   },
   {
     "race_name": "Yokine parkrun #61",
@@ -402,7 +532,12 @@
     "notion_title": null,
     "raw_times": "email time=0:27:06",
     "notion_page": null,
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:62",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "2087888247"
+    ]
   },
   {
     "race_name": "Yokine parkrun #73",
@@ -429,7 +564,12 @@
     "notion_title": null,
     "raw_times": "email time=0:26:59",
     "notion_page": null,
-    "data_issues": "results email said 44th place; official parkrun results history shows 43rd, used the official figure"
+    "data_issues": "results email said 44th place; official parkrun results history shows 43rd, used the official figure",
+    "id": "rr:63",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "2288029840"
+    ]
   },
   {
     "race_name": "Yokine parkrun #77",
@@ -456,7 +596,12 @@
     "notion_title": null,
     "raw_times": "email time=0:25:50",
     "notion_page": null,
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:64",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "2357381727"
+    ]
   },
   {
     "race_name": "HBF Run for Reason",
@@ -483,7 +628,12 @@
     "notion_title": "Run - Half Marathon",
     "raw_times": "Total Time=2.02; Run Time=2.02",
     "notion_page": "https://app.notion.com/0a6a82db0d1e4a8da8e8b5cc0c115a78",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:12",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "2378658755"
+    ]
   },
   {
     "race_name": "City to Surf",
@@ -510,34 +660,76 @@
     "notion_title": "Run - Marathon",
     "raw_times": "Total Time=4.39",
     "notion_page": "https://app.notion.com/17f7b333fea8446ba43eaeb4a2105fe2",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:13",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "2648701507"
+    ]
   },
   {
-    "race_name": "COVID YEAR",
-    "date": "2020-01-01",
-    "discipline": null,
-    "distance": null,
-    "distance_km": null,
+    "race_name": "Ocean Ride 100km",
+    "date": "2019-11-24",
+    "discipline": "Cycling",
+    "distance": "Gran Fondo",
+    "distance_km": 99.97,
     "distance_original": null,
-    "event_type": null,
-    "race_category": null,
-    "finish_time": null,
-    "finish_seconds": null,
+    "event_type": "Gran Fondo",
+    "race_category": "Gran Fondo",
+    "finish_time": "4:13:54",
+    "finish_seconds": 15234,
     "swim": null,
     "t1": null,
-    "bike": null,
+    "bike": "4:13:54",
     "t2": null,
     "run": null,
     "location": null,
     "position": null,
-    "notes": null,
-    "link": "https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.health.gov.au%2Fsites%2Fdefault%2Ffiles%2Fdocuments%2F2021%2F07%2Freport-on-the-operation-and-effectiveness-of-covidsafe-and-the-national-covidsafe-data-store_0.docx%23%3A~%3Atext%3DCOVID%25E2%2580%259019%2520was%2520first%2520reported%2Cconfirmed%2520in%2520January%252020201.&wdOrigin=BROWSELINK",
+    "notes": "Detected in Strava (activity 2886745043). Finish time = Strava elapsed time; moving time 3:54:12. Not an official result.",
+    "link": "https://www.strava.com/activities/2886745043",
     "strava_bike": null,
     "strava_bike_label": null,
-    "notion_title": "COVID YEAR",
+    "notion_title": null,
     "raw_times": null,
-    "notion_page": "https://app.notion.com/116e63293235802ea9a8d704f2da1244",
-    "data_issues": "no Race Name in source; used Notion title 'COVID YEAR'"
+    "notion_page": null,
+    "data_issues": null,
+    "id": "strava:2886745043",
+    "source": "Strava (added 19 Oct 2026)",
+    "strava_activity_ids": [
+      "2886745043"
+    ]
+  },
+  {
+    "race_name": "#doitfordan Newmarket GAA",
+    "date": "2020-04-28",
+    "discipline": "Run",
+    "distance": "5K",
+    "distance_km": 5.01,
+    "distance_original": null,
+    "event_type": "Charity / Fun Run",
+    "race_category": "Fun Run",
+    "finish_time": "0:25:55",
+    "finish_seconds": 1555,
+    "swim": null,
+    "t1": null,
+    "bike": null,
+    "t2": null,
+    "run": "0:25:55",
+    "location": null,
+    "position": null,
+    "notes": "Detected in Strava (activity 3364238268). Finish time = Strava elapsed time; moving time 0:25:51. Not an official result.",
+    "link": "https://www.strava.com/activities/3364238268",
+    "strava_bike": null,
+    "strava_bike_label": null,
+    "notion_title": null,
+    "raw_times": null,
+    "notion_page": null,
+    "data_issues": null,
+    "id": "strava:3364238268",
+    "source": "Strava (added 19 Oct 2026)",
+    "strava_activity_ids": [
+      "3364238268"
+    ]
   },
   {
     "race_name": "Canola Classic 94km",
@@ -564,7 +756,44 @@
     "notion_title": "Gran Fondo - 93km",
     "raw_times": "Total Time=3.44",
     "notion_page": "https://app.notion.com/211e6329323580e283a7cf0f900f07a6",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:15",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "4051499068"
+    ]
+  },
+  {
+    "race_name": "Open Water Swimming Series Cogee 1.25km",
+    "date": "2020-10-31",
+    "discipline": "Swim",
+    "distance": null,
+    "distance_km": 1.2,
+    "distance_original": null,
+    "event_type": "Open Water Swim",
+    "race_category": "Swim",
+    "finish_time": "0:34:00",
+    "finish_seconds": 2040,
+    "swim": "0:34:00",
+    "t1": null,
+    "bike": null,
+    "t2": null,
+    "run": null,
+    "location": null,
+    "position": null,
+    "notes": "Detected in Strava (activity 4264630883). Finish time = Strava elapsed time; moving time 0:34:00. Not an official result.",
+    "link": "https://www.strava.com/activities/4264630883",
+    "strava_bike": null,
+    "strava_bike_label": null,
+    "notion_title": null,
+    "raw_times": null,
+    "notion_page": null,
+    "data_issues": null,
+    "id": "strava:4264630883",
+    "source": "Strava (added 19 Oct 2026)",
+    "strava_activity_ids": [
+      "4264630883"
+    ]
   },
   {
     "race_name": "Stay Puft",
@@ -591,7 +820,44 @@
     "notion_title": "PTS - Trail Run Blue 12km",
     "raw_times": "Total Time=1.09",
     "notion_page": "https://app.notion.com/116e6329323580a89c80f83ce5b76010",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:16",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "4435108379"
+    ]
+  },
+  {
+    "race_name": "Perth Trail Series (blue) - Walyunga",
+    "date": "2021-01-03",
+    "discipline": "Trail Run",
+    "distance": "Trail",
+    "distance_km": 9.98,
+    "distance_original": null,
+    "event_type": "Trail Run",
+    "race_category": "Trail Run",
+    "finish_time": "1:02:49",
+    "finish_seconds": 3769,
+    "swim": null,
+    "t1": null,
+    "bike": null,
+    "t2": null,
+    "run": "1:02:49",
+    "location": null,
+    "position": null,
+    "notes": "Detected in Strava (activity 4557859074). Finish time = Strava elapsed time; moving time 1:02:33. Not an official result.",
+    "link": "https://www.strava.com/activities/4557859074",
+    "strava_bike": null,
+    "strava_bike_label": null,
+    "notion_title": null,
+    "raw_times": null,
+    "notion_page": null,
+    "data_issues": null,
+    "id": "strava:4557859074",
+    "source": "Strava (added 19 Oct 2026)",
+    "strava_activity_ids": [
+      "4557859074"
+    ]
   },
   {
     "race_name": "Interclubs Sprint Triathlon",
@@ -618,7 +884,48 @@
     "notion_title": "Triathlon - Sprint",
     "raw_times": "Total Time=1.27; Swim Time=18; Bike Time=38; Run Time=27",
     "notion_page": "https://app.notion.com/0707fc0139a142dfbec3f41abbb8fff9",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:17",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "4595347167",
+      "4595347173",
+      "4595347235",
+      "4595347220",
+      "4595347256"
+    ]
+  },
+  {
+    "race_name": "Perth Trail Series - Qi Gong Black Course",
+    "date": "2021-01-17",
+    "discipline": "Trail Run",
+    "distance": "Trail",
+    "distance_km": 13.48,
+    "distance_original": null,
+    "event_type": "Trail Run",
+    "race_category": "Trail Run",
+    "finish_time": "1:37:15",
+    "finish_seconds": 5835,
+    "swim": null,
+    "t1": null,
+    "bike": null,
+    "t2": null,
+    "run": "1:37:15",
+    "location": null,
+    "position": null,
+    "notes": "Detected in Strava (activity 4632954040). Finish time = Strava elapsed time; moving time 1:35:23. Not an official result.",
+    "link": "https://www.strava.com/activities/4632954040",
+    "strava_bike": null,
+    "strava_bike_label": null,
+    "notion_title": null,
+    "raw_times": null,
+    "notion_page": null,
+    "data_issues": null,
+    "id": "strava:4632954040",
+    "source": "Strava (added 19 Oct 2026)",
+    "strava_activity_ids": [
+      "4632954040"
+    ]
   },
   {
     "race_name": "Kalamunda 100",
@@ -645,11 +952,48 @@
     "notion_title": "Gran Fondo - 100km 1900m",
     "raw_times": "Total Time=4.07",
     "notion_page": "https://app.notion.com/116e63293235809aa380c538b53b8b2f",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:18",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "4821329430"
+    ]
+  },
+  {
+    "race_name": "Perth Trail Series - Swismurdie ⚫",
+    "date": "2021-02-28",
+    "discipline": "Trail Run",
+    "distance": "Trail",
+    "distance_km": 15.04,
+    "distance_original": null,
+    "event_type": "Trail Run",
+    "race_category": "Trail Run",
+    "finish_time": "1:51:08",
+    "finish_seconds": 6668,
+    "swim": null,
+    "t1": null,
+    "bike": null,
+    "t2": null,
+    "run": "1:51:08",
+    "location": null,
+    "position": null,
+    "notes": "Detected in Strava (activity 4862583949). Finish time = Strava elapsed time; moving time 1:50:25. Not an official result.",
+    "link": "https://www.strava.com/activities/4862583949",
+    "strava_bike": null,
+    "strava_bike_label": null,
+    "notion_title": null,
+    "raw_times": null,
+    "notion_page": null,
+    "data_issues": null,
+    "id": "strava:4862583949",
+    "source": "Strava (added 19 Oct 2026)",
+    "strava_activity_ids": [
+      "4862583949"
+    ]
   },
   {
     "race_name": "5 Dams",
-    "date": "2021-04-11",
+    "date": "2021-03-28",
     "discipline": "Cycling",
     "distance": "Gran Fondo",
     "distance_km": 200.0,
@@ -672,7 +1016,12 @@
     "notion_title": "Gran Fondo - 200km 2450m",
     "raw_times": "Total Time=9.1",
     "notion_page": "https://app.notion.com/a0584552a988477d923aa320ef2d4900",
-    "data_issues": null
+    "data_issues": "Date corrected 2021-04-11 -> 2021-03-28 (19 Oct 2026) to match Strava activity date (local time).",
+    "id": "rr:19",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "5029020033"
+    ]
   },
   {
     "race_name": "70.3 Western Australia",
@@ -699,7 +1048,80 @@
     "notion_title": "Triathlon - 70.3",
     "raw_times": "Total Time=6.07; Swim Time=48; Bike Time=2.55; Run Time=2.15",
     "notion_page": "https://app.notion.com/fe186de3ec7d4285a0b7b4a7c3a22583",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:20",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "5221343443",
+      "5221343496",
+      "5221343815",
+      "5221343444",
+      "5221343499"
+    ]
+  },
+  {
+    "race_name": "Perth Trail Run - Snakes 🐍 & Ladders🪜",
+    "date": "2021-05-23",
+    "discipline": "Trail Run",
+    "distance": "Trail",
+    "distance_km": 14.96,
+    "distance_original": null,
+    "event_type": "Trail Run",
+    "race_category": "Trail Run",
+    "finish_time": "1:53:46",
+    "finish_seconds": 6826,
+    "swim": null,
+    "t1": null,
+    "bike": null,
+    "t2": null,
+    "run": "1:53:46",
+    "location": null,
+    "position": null,
+    "notes": "Detected in Strava (activity 5342202351). Finish time = Strava elapsed time; moving time 1:51:34. Not an official result.",
+    "link": "https://www.strava.com/activities/5342202351",
+    "strava_bike": null,
+    "strava_bike_label": null,
+    "notion_title": null,
+    "raw_times": null,
+    "notion_page": null,
+    "data_issues": null,
+    "id": "strava:5342202351",
+    "source": "Strava (added 19 Oct 2026)",
+    "strava_activity_ids": [
+      "5342202351"
+    ]
+  },
+  {
+    "race_name": "Perth Trail Run Winter Series 🦅 Eagle & Child",
+    "date": "2021-06-13",
+    "discipline": "Trail Run",
+    "distance": "Trail",
+    "distance_km": 20.33,
+    "distance_original": null,
+    "event_type": "Trail Run",
+    "race_category": "Trail Run",
+    "finish_time": "2:13:24",
+    "finish_seconds": 8004,
+    "swim": null,
+    "t1": null,
+    "bike": null,
+    "t2": null,
+    "run": "2:13:24",
+    "location": null,
+    "position": null,
+    "notes": "Detected in Strava (activity 5460376549). Finish time = Strava elapsed time; moving time 2:13:02. Not an official result.",
+    "link": "https://www.strava.com/activities/5460376549",
+    "strava_bike": null,
+    "strava_bike_label": null,
+    "notion_title": null,
+    "raw_times": null,
+    "notion_page": null,
+    "data_issues": null,
+    "id": "strava:5460376549",
+    "source": "Strava (added 19 Oct 2026)",
+    "strava_activity_ids": [
+      "5460376549"
+    ]
   },
   {
     "race_name": "Bibra Lake",
@@ -726,7 +1148,12 @@
     "notion_title": "Run - Half Marathon",
     "raw_times": "Total Time=1.56; Run Time=1.56",
     "notion_page": "https://app.notion.com/111e63293235807eb4c9c42bb4d70bf2",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:21",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "5869562292"
+    ]
   },
   {
     "race_name": "Mullaloo Sunset Marathon",
@@ -753,7 +1180,76 @@
     "notion_title": "Run - Marathon",
     "raw_times": "Total Time=4.45",
     "notion_page": "https://app.notion.com/6c6d79f31a744cc7a1a37eb38dff488d",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:22",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "5983035164"
+    ]
+  },
+  {
+    "race_name": "Mental Health Matters 200km",
+    "date": "2021-10-09",
+    "discipline": "Cycling",
+    "distance": "Gran Fondo",
+    "distance_km": 200.01,
+    "distance_original": null,
+    "event_type": "Gran Fondo",
+    "race_category": "Gran Fondo",
+    "finish_time": "9:45:58",
+    "finish_seconds": 35158,
+    "swim": null,
+    "t1": null,
+    "bike": "9:45:58",
+    "t2": null,
+    "run": null,
+    "location": null,
+    "position": null,
+    "notes": "Detected in Strava (activity 6085286334). Finish time = Strava elapsed time; moving time 6:52:10. Not an official result.",
+    "link": "https://www.strava.com/activities/6085286334",
+    "strava_bike": null,
+    "strava_bike_label": null,
+    "notion_title": null,
+    "raw_times": null,
+    "notion_page": null,
+    "data_issues": null,
+    "id": "strava:6085286334",
+    "source": "Strava (added 19 Oct 2026)",
+    "strava_activity_ids": [
+      "6085286334"
+    ]
+  },
+  {
+    "race_name": "OWS Leighton Beach 2.5km",
+    "date": "2021-10-23",
+    "discipline": "Swim",
+    "distance": null,
+    "distance_km": 2.5,
+    "distance_original": null,
+    "event_type": "Open Water Swim",
+    "race_category": "Swim",
+    "finish_time": "0:57:23",
+    "finish_seconds": 3443,
+    "swim": "0:57:23",
+    "t1": null,
+    "bike": null,
+    "t2": null,
+    "run": null,
+    "location": null,
+    "position": null,
+    "notes": "Detected in Strava (activity 6152697464). Finish time = Strava elapsed time; moving time 0:57:23. Not an official result.",
+    "link": "https://www.strava.com/activities/6152697464",
+    "strava_bike": null,
+    "strava_bike_label": null,
+    "notion_title": null,
+    "raw_times": null,
+    "notion_page": null,
+    "data_issues": null,
+    "id": "strava:6152697464",
+    "source": "Strava (added 19 Oct 2026)",
+    "strava_activity_ids": [
+      "6152697464"
+    ]
   },
   {
     "race_name": "Rockingham Shoalwater",
@@ -780,7 +1276,14 @@
     "notion_title": "Triathlon - Olympic",
     "raw_times": "Total Time=2.38; Swim Time=27; Bike Time=1.18; Run Time=52",
     "notion_page": "https://app.notion.com/80bb14e899e048c890ec81e2f5d26895",
-    "data_issues": "Bike Time column 1.18 but notes say 1.12"
+    "data_issues": "Bike Time column 1.18 but notes say 1.12",
+    "id": "rr:23",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "6189935604",
+      "6189937768",
+      "6189938316"
+    ]
   },
   {
     "race_name": "IM Western Australia",
@@ -807,7 +1310,78 @@
     "notion_title": "Triathlon - Ironman WA",
     "raw_times": "Total Time=13.15; Swim Time=1.22; T1 Time=8.36; Bike Time=5.50; T2 Time=10.48; Run Time=5.36",
     "notion_page": "https://app.notion.com/45ad1c6fff39484297144770dfc49516",
-    "data_issues": "splits sum to 13:07:24 but Total is 13:15:00; notes and page list say total 13.12 / swim 1.21 / bike 5.56; Total column says 13.15"
+    "data_issues": "splits sum to 13:07:24 but Total is 13:15:00; notes and page list say total 13.12 / swim 1.21 / bike 5.56; Total column says 13.15",
+    "id": "rr:24",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "6344354668",
+      "6350001558",
+      "6350007374"
+    ]
+  },
+  {
+    "race_name": "Perth Trail Series - Snakes & Ladders ⚫",
+    "date": "2022-05-22",
+    "discipline": "Trail Run",
+    "distance": "Trail",
+    "distance_km": 14.7,
+    "distance_original": null,
+    "event_type": "Trail Run",
+    "race_category": "Trail Run",
+    "finish_time": "2:04:03",
+    "finish_seconds": 7443,
+    "swim": null,
+    "t1": null,
+    "bike": null,
+    "t2": null,
+    "run": "2:04:03",
+    "location": null,
+    "position": null,
+    "notes": "Detected in Strava (activity 7181860598). Finish time = Strava elapsed time; moving time 2:00:48. Not an official result.",
+    "link": "https://www.strava.com/activities/7181860598",
+    "strava_bike": null,
+    "strava_bike_label": null,
+    "notion_title": null,
+    "raw_times": null,
+    "notion_page": null,
+    "data_issues": null,
+    "id": "strava:7181860598",
+    "source": "Strava (added 19 Oct 2026)",
+    "strava_activity_ids": [
+      "7181860598"
+    ]
+  },
+  {
+    "race_name": "PTS Eagle 🦅 & Child 👶Black Course",
+    "date": "2022-06-12",
+    "discipline": "Trail Run",
+    "distance": "Trail",
+    "distance_km": 20.16,
+    "distance_original": null,
+    "event_type": "Trail Run",
+    "race_category": "Trail Run",
+    "finish_time": "2:18:57",
+    "finish_seconds": 8337,
+    "swim": null,
+    "t1": null,
+    "bike": null,
+    "t2": null,
+    "run": "2:18:57",
+    "location": null,
+    "position": null,
+    "notes": "Detected in Strava (activity 7293956062). Finish time = Strava elapsed time; moving time 2:17:51. Not an official result.",
+    "link": "https://www.strava.com/activities/7293956062",
+    "strava_bike": null,
+    "strava_bike_label": null,
+    "notion_title": null,
+    "raw_times": null,
+    "notion_page": null,
+    "data_issues": null,
+    "id": "strava:7293956062",
+    "source": "Strava (added 19 Oct 2026)",
+    "strava_activity_ids": [
+      "7293956062"
+    ]
   },
   {
     "race_name": "Jolly Jumbuck PTS",
@@ -834,7 +1408,44 @@
     "notion_title": "Jolly Jumbuck",
     "raw_times": "Total Time=2.28; Run Time=2.28",
     "notion_page": "https://app.notion.com/227e6329323580f4a04be6f6b75e54f2",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:25",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "7405885493"
+    ]
+  },
+  {
+    "race_name": "PTS Truth or Consequences Double Black",
+    "date": "2022-07-31",
+    "discipline": "Trail Run",
+    "distance": "Ultra",
+    "distance_km": 48.05,
+    "distance_original": null,
+    "event_type": "Trail Run",
+    "race_category": "Ultra",
+    "finish_time": "6:51:35",
+    "finish_seconds": 24695,
+    "swim": null,
+    "t1": null,
+    "bike": null,
+    "t2": null,
+    "run": "6:51:35",
+    "location": null,
+    "position": null,
+    "notes": "Detected in Strava (activity 7556870159). Finish time = Strava elapsed time; moving time 6:47:26. Not an official result.",
+    "link": "https://www.strava.com/activities/7556870159",
+    "strava_bike": null,
+    "strava_bike_label": null,
+    "notion_title": null,
+    "raw_times": null,
+    "notion_page": null,
+    "data_issues": null,
+    "id": "strava:7556870159",
+    "source": "Strava (added 19 Oct 2026)",
+    "strava_activity_ids": [
+      "7556870159"
+    ]
   },
   {
     "race_name": "Tiger Snake",
@@ -861,7 +1472,15 @@
     "notion_title": "Triathlon - Olympic",
     "raw_times": "Total Time=2.35",
     "notion_page": "https://app.notion.com/116e63293235807c8120f844cf556823",
-    "data_issues": "splits only in notes (Swim 25min, Bike 1.18, Run 52min; swim shortened to 1000m), not imported into split fields"
+    "data_issues": "splits only in notes (Swim 25min, Bike 1.18, Run 52min; swim shortened to 1000m), not imported into split fields",
+    "id": "rr:26",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "7897502968",
+      "7897503026",
+      "7897502991",
+      "7897502998"
+    ]
   },
   {
     "race_name": "IM Western Australia",
@@ -888,7 +1507,14 @@
     "notion_title": "Triathlon - Ironman WA",
     "raw_times": "Total Time=12.43; Swim Time=1.29; T1 Time=10.58; Bike Time=5.52; T2 Time=9.46; Run Time=4.55",
     "notion_page": "https://app.notion.com/4353d425d0264d7da24b6a3604ad4a3a",
-    "data_issues": "splits sum to 12:36:44 but Total is 12:43:00; notes say total 12:44, bike 5.57, run 4.56; columns say 12.43 / 5.52 / 4.55"
+    "data_issues": "splits sum to 12:36:44 but Total is 12:43:00; notes say total 12:44, bike 5.57, run 4.56; columns say 12.43 / 5.52 / 4.55",
+    "id": "rr:27",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "8206101531",
+      "8208934742",
+      "8206112830"
+    ]
   },
   {
     "race_name": "Interclubs Sprint Triathlon",
@@ -915,11 +1541,20 @@
     "notion_title": "Triathlon - Sprint",
     "raw_times": "Total Time=1.22; Swim Time=16; Bike Time=36; Run Time=26",
     "notion_page": "https://app.notion.com/18020ac9d2054677ad32d8513e61ba68",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:28",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "8355621180",
+      "8355621198",
+      "8355621256",
+      "8355621225",
+      "8355621236"
+    ]
   },
   {
     "race_name": "5 Dams",
-    "date": "2023-04-23",
+    "date": "2023-04-16",
     "discipline": "Cycling",
     "distance": "Gran Fondo",
     "distance_km": 200.0,
@@ -942,7 +1577,45 @@
     "notion_title": "Gran Fondo - 200km 2450m",
     "raw_times": "Total Time=8.11",
     "notion_page": "https://app.notion.com/38ed2dd0a6054b9ca7965f90e1b3cd39",
-    "data_issues": null
+    "data_issues": "Date corrected 2023-04-23 -> 2023-04-16 (19 Oct 2026) to match Strava activity date (local time).",
+    "id": "rr:29",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "9722848363",
+      "8898572344"
+    ]
+  },
+  {
+    "race_name": "Snakes & Ladders PTS",
+    "date": "2023-05-28",
+    "discipline": "Trail Run",
+    "distance": "Trail",
+    "distance_km": 14.96,
+    "distance_original": null,
+    "event_type": "Trail Run",
+    "race_category": "Trail Run",
+    "finish_time": "1:56:31",
+    "finish_seconds": 6991,
+    "swim": null,
+    "t1": null,
+    "bike": null,
+    "t2": null,
+    "run": "1:56:31",
+    "location": null,
+    "position": null,
+    "notes": "Detected in Strava (activity 9153593107). Finish time = Strava elapsed time; moving time 1:54:04. Not an official result.",
+    "link": "https://www.strava.com/activities/9153593107",
+    "strava_bike": null,
+    "strava_bike_label": null,
+    "notion_title": null,
+    "raw_times": null,
+    "notion_page": null,
+    "data_issues": null,
+    "id": "strava:9153593107",
+    "source": "Strava (added 19 Oct 2026)",
+    "strava_activity_ids": [
+      "9153593107"
+    ]
   },
   {
     "race_name": "3 Valleys Altra Runningworks",
@@ -969,7 +1642,44 @@
     "notion_title": "Trail Run - 3 Valleys Altra",
     "raw_times": "Total Time=4.15",
     "notion_page": "https://app.notion.com/183e6329323580c1828becc8445b70ca",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:30",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "9198115070"
+    ]
+  },
+  {
+    "race_name": "PTS Eagle & Child",
+    "date": "2023-06-18",
+    "discipline": "Trail Run",
+    "distance": "Trail",
+    "distance_km": 20.28,
+    "distance_original": null,
+    "event_type": "Trail Run",
+    "race_category": "Trail Run",
+    "finish_time": "2:14:15",
+    "finish_seconds": 8055,
+    "swim": null,
+    "t1": null,
+    "bike": null,
+    "t2": null,
+    "run": "2:14:15",
+    "location": null,
+    "position": null,
+    "notes": "Detected in Strava (activity 9285982284). Finish time = Strava elapsed time; moving time 2:12:30. Not an official result.",
+    "link": "https://www.strava.com/activities/9285982284",
+    "strava_bike": null,
+    "strava_bike_label": null,
+    "notion_title": null,
+    "raw_times": null,
+    "notion_page": null,
+    "data_issues": null,
+    "id": "strava:9285982284",
+    "source": "Strava (added 19 Oct 2026)",
+    "strava_activity_ids": [
+      "9285982284"
+    ]
   },
   {
     "race_name": "Transcend",
@@ -996,7 +1706,12 @@
     "notion_title": "Trail Run - Ultra 40km 1625m",
     "raw_times": "Total Time=6.02",
     "notion_page": "https://app.notion.com/c1fdc1a9c2d54222bed0fcfe2b0dd8c8",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:31",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "9329499103"
+    ]
   },
   {
     "race_name": "Truth or Consequences",
@@ -1023,7 +1738,12 @@
     "notion_title": "Trail Run - Ultra 50km 1641m",
     "raw_times": "Total Time=7.07",
     "notion_page": "https://app.notion.com/777000e514d44635993457557fa2834c",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:32",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "9591497099"
+    ]
   },
   {
     "race_name": "Collie 100",
@@ -1050,7 +1770,12 @@
     "notion_title": "Trail Run - Ultra 55km 900m",
     "raw_times": "Total Time=7.04",
     "notion_page": "https://app.notion.com/4576da690448477ab084bb0a48facd3c",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:33",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "9813246815"
+    ]
   },
   {
     "race_name": "IM Western Australia",
@@ -1077,7 +1802,14 @@
     "notion_title": "Triathlon - Ironman WA",
     "raw_times": "Total Time=12.2; Swim Time=1.25; T1 Time=8.25; Bike Time=5.44; T2 Time=10.51; Run Time=4.50",
     "notion_page": "https://app.notion.com/aa3104accff8411abeda205ac0a7a149",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:34",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "10324969510",
+      "10325723858",
+      "10324971674"
+    ]
   },
   {
     "race_name": "Summer Series - Sly Fox",
@@ -1104,7 +1836,12 @@
     "notion_title": "Trail Run - 14km",
     "raw_times": "Total Time=1.45",
     "notion_page": "https://app.notion.com/3d608f48c0264056bd6cea3082db9928",
-    "data_issues": "URL column held non-URL text 'Black Male | 35-44 | 2024 Summer Series Sly Fox | Resources.ws.RaceResults | Webscorer' (moved to Notes, Link left blank)"
+    "data_issues": "URL column held non-URL text 'Black Male | 35-44 | 2024 Summer Series Sly Fox | Resources.ws.RaceResults | Webscorer' (moved to Notes, Link left blank)",
+    "id": "rr:35",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "10598053124"
+    ]
   },
   {
     "race_name": "Rockingham Shoalwater",
@@ -1131,7 +1868,16 @@
     "notion_title": "Triathlon - Olympic",
     "raw_times": "Total Time=2.46; Swim Time=34.38; Bike Time=1.16; Run Time=56.01",
     "notion_page": "https://app.notion.com/fa0509b134f146798bbfad8275187fbd",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:36",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "10926926575",
+      "10926926582",
+      "10926926636",
+      "10926926594",
+      "10926926610"
+    ]
   },
   {
     "race_name": "ATTA Time Trial",
@@ -1158,7 +1904,12 @@
     "notion_title": "Bike Time Trail - 80km",
     "raw_times": "Total Time=2.22; Bike Time=2.22",
     "notion_page": "https://app.notion.com/db2d9997759b418e86bb0ea46b125b55",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:37",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "11024866456"
+    ]
   },
   {
     "race_name": "Mullaloo Olympic Tri",
@@ -1185,7 +1936,16 @@
     "notion_title": "Triathlon - Olympic",
     "raw_times": "Total Time=2.32; Swim Time=28.45; T1 Time=2.27; Bike Time=1.07; T2 Time=1.20; Run Time=52.41",
     "notion_page": "https://app.notion.com/fcfcd51556774075bd9b51f7f3b4d1d0",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:38",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "11176367048",
+      "11176367058",
+      "11176367109",
+      "11176367075",
+      "11176367087"
+    ]
   },
   {
     "race_name": "Port Macquarie 70.3",
@@ -1212,7 +1972,16 @@
     "notion_title": "Triathlon - 70.3",
     "raw_times": "Total Time=5.48; Swim Time=41.32; T1 Time=4.08; Bike Time=3.00; T2 Time=2.03; Run Time=1.59",
     "notion_page": "https://app.notion.com/6cd9ff179ba74581a9509dd2967ae767",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:39",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "11334766090",
+      "11334766152",
+      "11334766335",
+      "11334766156",
+      "11334766181"
+    ]
   },
   {
     "race_name": "Snakes & Ladders",
@@ -1239,7 +2008,12 @@
     "notion_title": "Trail Run - 21km",
     "raw_times": "Total Time=2.39; Run Time=2.39",
     "notion_page": "https://app.notion.com/fbfc40a7282f4af5b23b29f3ae535826",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:40",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "11498441141"
+    ]
   },
   {
     "race_name": "Bibra Lake",
@@ -1266,7 +2040,12 @@
     "notion_title": "Run - Marathon",
     "raw_times": "Total Time=3.58; Run Time=3.58",
     "notion_page": "https://app.notion.com/a0361acede9a48bbbce5ddd4240d137b",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:41",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "11826404617"
+    ]
   },
   {
     "race_name": "Sunshine Coast 70.3",
@@ -1293,7 +2072,16 @@
     "notion_title": "Triathlon - 70.3",
     "raw_times": "Total Time=5.26; Swim Time=37; T1 Time=3.09; Bike Time=2.39; T2 Time=2.52; Run Time=2.03",
     "notion_page": "https://app.notion.com/326bb6bb3dbd42a1a608a0b3c5ad0600",
-    "data_issues": "notes mention a 2.02 run; Run Time column says 2.03"
+    "data_issues": "notes mention a 2.02 run; Run Time column says 2.03",
+    "id": "rr:42",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "12354585976",
+      "12354585979",
+      "12354586084",
+      "12354585992",
+      "12354586032"
+    ]
   },
   {
     "race_name": "Perth Running Festival",
@@ -1320,7 +2108,12 @@
     "notion_title": "Run - Half Marathon",
     "raw_times": "Total Time=1.47; Run Time=1.47",
     "notion_page": "https://app.notion.com/116e632932358029b59bf19562b567f9",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:43",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "12585833155"
+    ]
   },
   {
     "race_name": "IM Western Australia",
@@ -1347,7 +2140,16 @@
     "notion_title": "Triathlon - Ironman WA",
     "raw_times": "Total Time=11.08; Swim Time=1.18; T1 Time=6.27; Bike Time=5.30; T2 Time=5.36; Run Time=4.07",
     "notion_page": "https://app.notion.com/150e6329323580a0a5d3ed4c70bc2d6b",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:44",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "13022437240",
+      "13022437880",
+      "13022438179",
+      "13022437319",
+      "13022438055"
+    ]
   },
   {
     "race_name": "Galup Reserve parkrun #5",
@@ -1374,7 +2176,12 @@
     "notion_title": null,
     "raw_times": "email time=0:22:08",
     "notion_page": null,
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:65",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "13158169750"
+    ]
   },
   {
     "race_name": "Perry Lakes parkrun #287",
@@ -1401,7 +2208,12 @@
     "notion_title": null,
     "raw_times": "email time=0:22:11",
     "notion_page": null,
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:66",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "13259563386"
+    ]
   },
   {
     "race_name": "Interclubs",
@@ -1428,7 +2240,16 @@
     "notion_title": "Triathlon - Sprint",
     "raw_times": "Total Time=1.17; Swim Time=16.03; T1 Time=2; Bike Time=34.29; T2 Time=1.19; Run Time=23.21",
     "notion_page": "https://app.notion.com/1d5e6329323580b2b01eca1a9a043fee",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:45",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "13329878884",
+      "13329878893",
+      "13329878917",
+      "13329878892",
+      "13329878895"
+    ]
   },
   {
     "race_name": "Perry Lakes parkrun #290",
@@ -1455,7 +2276,12 @@
     "notion_title": null,
     "raw_times": "email time=0:23:57",
     "notion_page": null,
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:67",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "13443896757"
+    ]
   },
   {
     "race_name": "Perry Lakes parkrun #291",
@@ -1482,7 +2308,12 @@
     "notion_title": null,
     "raw_times": "email time=0:26:02",
     "notion_page": null,
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:68",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "13505592209"
+    ]
   },
   {
     "race_name": "Galup Reserve parkrun #14",
@@ -1509,7 +2340,12 @@
     "notion_title": null,
     "raw_times": "email time=0:24:13",
     "notion_page": null,
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:69",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "13691283784"
+    ]
   },
   {
     "race_name": "Galup Reserve parkrun #15",
@@ -1536,7 +2372,12 @@
     "notion_title": null,
     "raw_times": "email time=0:25:25",
     "notion_page": null,
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:70",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "13754950858"
+    ]
   },
   {
     "race_name": "Galup Reserve parkrun #16",
@@ -1563,7 +2404,12 @@
     "notion_title": null,
     "raw_times": "email time=0:23:12",
     "notion_page": null,
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:71",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "13818698460"
+    ]
   },
   {
     "race_name": "Galup Reserve parkrun #18",
@@ -1590,11 +2436,16 @@
     "notion_title": null,
     "raw_times": "email time=0:25:51",
     "notion_page": null,
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:72",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "13949734212"
+    ]
   },
   {
     "race_name": "Coogee Beach Tri",
-    "date": "2025-04-05",
+    "date": "2025-03-30",
     "discipline": "Triathlon",
     "distance": "Sprint",
     "distance_km": null,
@@ -1617,7 +2468,16 @@
     "notion_title": "Triathlon - Sprint",
     "raw_times": "Total Time=1.25; Swim Time=18.2; T1 Time=1.41; Bike Time=39.05; T2 Time=1.07; Run Time=24.55",
     "notion_page": "https://app.notion.com/179e632932358077b30fdd8b294fa985",
-    "data_issues": null
+    "data_issues": "Date corrected 2025-04-05 -> 2025-03-30 (19 Oct 2026) to match Strava activity date (local time).",
+    "id": "rr:46",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "14025067374",
+      "14025067386",
+      "14025067407",
+      "14025067375",
+      "14025067390"
+    ]
   },
   {
     "race_name": "Galup Reserve parkrun #20",
@@ -1644,7 +2504,12 @@
     "notion_title": null,
     "raw_times": "email time=0:22:47",
     "notion_page": null,
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:73",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "14082458616"
+    ]
   },
   {
     "race_name": "Galup Reserve parkrun #24",
@@ -1671,7 +2536,12 @@
     "notion_title": null,
     "raw_times": "email time=0:24:59",
     "notion_page": null,
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:74",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "14359343136"
+    ]
   },
   {
     "race_name": "Chitty Chitty",
@@ -1698,7 +2568,12 @@
     "notion_title": "Trail Run - 18km",
     "raw_times": "Total Time=2; Run Time=2.00.10",
     "notion_page": "https://app.notion.com/1f8e632932358042a6b4e931d659422a",
-    "data_issues": "total '2' read as 2 hours; finish time taken from Run Time 2:00:10 (more precise than Total '2')"
+    "data_issues": "total '2' read as 2 hours; finish time taken from Run Time 2:00:10 (more precise than Total '2')",
+    "id": "rr:47",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "14514035152"
+    ]
   },
   {
     "race_name": "Jolly Jumbuck",
@@ -1725,7 +2600,10 @@
     "notion_title": "Trail Run - 21km",
     "raw_times": null,
     "notion_page": "https://app.notion.com/210e63293235805fae18c52c592231ca",
-    "data_issues": "no Type/Race Distance in source; discipline taken from Notion title; no result recorded (notes: 'SICK'), likely DNS"
+    "data_issues": "no Type/Race Distance in source; discipline taken from Notion title; no result recorded (notes: 'SICK'), likely DNS",
+    "id": "rr:48",
+    "source": "Notion",
+    "strava_activity_ids": []
   },
   {
     "race_name": "Perth Half Marathon",
@@ -1752,7 +2630,12 @@
     "notion_title": "Run - Half Marathon",
     "raw_times": "Total Time=1.44",
     "notion_page": "https://app.notion.com/210e632932358095821be79b712f76d3",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:49",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "15325322858"
+    ]
   },
   {
     "race_name": "Galup Reserve parkrun #38",
@@ -1779,7 +2662,12 @@
     "notion_title": null,
     "raw_times": "email time=0:25:31",
     "notion_page": null,
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:75",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "15393364990"
+    ]
   },
   {
     "race_name": "Galup Reserve parkrun #39",
@@ -1806,7 +2694,12 @@
     "notion_title": null,
     "raw_times": "email time=0:26:10",
     "notion_page": null,
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:76",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "15473191538"
+    ]
   },
   {
     "race_name": "Perth 32",
@@ -1833,7 +2726,12 @@
     "notion_title": "Trail Run - Ultra 55km",
     "raw_times": "Total Time=2.58",
     "notion_page": "https://app.notion.com/210e6329323580629530d2ed579fe4e7",
-    "data_issues": "Distance column says 55km (and title 'Trail Run - Ultra 55km') but name and notes suggest 32km; category follows the 55km in source"
+    "data_issues": "Distance column says 55km (and title 'Trail Run - Ultra 55km') but name and notes suggest 32km; category follows the 55km in source",
+    "id": "rr:50",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "15564321243"
+    ]
   },
   {
     "race_name": "City to Surf 12km",
@@ -1860,7 +2758,12 @@
     "notion_title": "Trail Run - 21km",
     "raw_times": "Total Time=58",
     "notion_page": "https://app.notion.com/210e63293235807ea86af75aab9214d6",
-    "data_issues": "total '58' read as 58 minutes; Notion title says 'Trail Run - 21km'; race name says 12km (used 12km)"
+    "data_issues": "total '58' read as 58 minutes; Notion title says 'Trail Run - 21km'; race name says 12km (used 12km)",
+    "id": "rr:51",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "15643448764"
+    ]
   },
   {
     "race_name": "Sunset Run Not a Marathon",
@@ -1887,7 +2790,12 @@
     "notion_title": "Sunset 34km",
     "raw_times": "Total Time=3.11; Run Time=3.04",
     "notion_page": "https://app.notion.com/26ee63293235806bb611c8811b7100ed",
-    "data_issues": "Distance column says 44km but Notion title says 'Sunset 34km'; category follows the 44km in source"
+    "data_issues": "Distance column says 44km but Notion title says 'Sunset 34km'; category follows the 44km in source",
+    "id": "rr:52",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "15803343300"
+    ]
   },
   {
     "race_name": "Galup Reserve parkrun #44",
@@ -1914,7 +2822,12 @@
     "notion_title": null,
     "raw_times": "email time=0:25:27",
     "notion_page": null,
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:77",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "15870941169"
+    ]
   },
   {
     "race_name": "Perth City Marathon",
@@ -1941,7 +2854,12 @@
     "notion_title": "Marathon",
     "raw_times": "Total Time=3.55",
     "notion_page": "https://app.notion.com/210e6329323580bf9da7f8d6c8f04973",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:53",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "16111834747"
+    ]
   },
   {
     "race_name": "Rockingham Shoalwater",
@@ -1968,7 +2886,15 @@
     "notion_title": "Shoalwater Rockingham",
     "raw_times": "Total Time=2.43",
     "notion_page": "https://app.notion.com/298e632932358013948ec81abc92022f",
-    "data_issues": "splits only in notes (Swim 34, Bike 1.15, Run 53), not imported into split fields"
+    "data_issues": "splits only in notes (Swim 34, Bike 1.15, Run 53), not imported into split fields",
+    "id": "rr:54",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "16257193666",
+      "16257193667",
+      "16257193685",
+      "16257193683"
+    ]
   },
   {
     "race_name": "OWS coogee 5k.",
@@ -1995,11 +2921,16 @@
     "notion_title": "OWS Coogwe 5kn",
     "raw_times": "Total Time=1.53; Swim Time=1.53",
     "notion_page": "https://app.notion.com/2b3e6329323580aa9e38e11630c5478b",
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:55",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "16529264607"
+    ]
   },
   {
     "race_name": "Christmas 10km",
-    "date": "2025-12-21",
+    "date": "2025-12-20",
     "discipline": "Swim",
     "distance": "Swim 10K",
     "distance_km": 10.0,
@@ -2015,18 +2946,23 @@
     "run": null,
     "location": null,
     "position": null,
-    "notes": "Horrendous conditions [Tracking 2025 Coogee 10km in 4 Hours | Notion](https://www.notion.so/Tracking-2025-Coogee-10km-in-4-Hours-26ae6329323580fabc4acd62d8c6aa6f)",
+    "notes": "Horrendous conditions [Tracking 2025 Coogee 10km in 4 Hours | Notion](https://app.notion.com/p/26ae6329323580fabc4acd62d8c6aa6f)",
     "link": "https://bluechipresults.com.au/myresults.aspx?CId=11&RId=1908&EId=4&AId=49",
     "strava_bike": null,
     "strava_bike_label": null,
     "notion_title": "Swim - 10km",
     "raw_times": "Total Time=4.18; Swim Time=4.18",
     "notion_page": "https://app.notion.com/211e63293235805da6bbdd240b1fbeff",
-    "data_issues": null
+    "data_issues": "Date corrected 2025-12-21 -> 2025-12-20 (19 Oct 2026) to match Strava activity date (local time).",
+    "id": "rr:56",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "16789734127"
+    ]
   },
   {
     "race_name": "IM New Zealand",
-    "date": "2026-03-06",
+    "date": "2026-03-07",
     "discipline": "Ironman",
     "distance": "Ironman",
     "distance_km": null,
@@ -2049,7 +2985,16 @@
     "notion_title": "Triathlon - Ironman NZ",
     "raw_times": "Total Time=12.22; Swim Time=1.16; T1 Time=6.40; Bike Time=6.04; T2 Time=5.12; Run Time=4.49",
     "notion_page": "https://app.notion.com/328e6329323580e69788eb676a7a3e16",
-    "data_issues": null
+    "data_issues": "Date corrected 2026-03-06 -> 2026-03-07 (19 Oct 2026) to match Strava activity date (local time).",
+    "id": "rr:57",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "17641014639",
+      "17641014669",
+      "17641014819",
+      "17641014666",
+      "17641014715"
+    ]
   },
   {
     "race_name": "Galup Reserve parkrun #73",
@@ -2076,7 +3021,12 @@
     "notion_title": null,
     "raw_times": "email time=0:21:50",
     "notion_page": null,
-    "data_issues": "results email said 0:21:50 (61.60% age grade); official parkrun results history shows 0:21:59 (61.18%), used the official figure (later emails also give the PB as 0:21:59)"
+    "data_issues": "results email said 0:21:50 (61.60% age grade); official parkrun results history shows 0:21:59 (61.18%), used the official figure (later emails also give the PB as 0:21:59)",
+    "id": "rr:78",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "18059874636"
+    ]
   },
   {
     "race_name": "Galup Reserve parkrun #75",
@@ -2103,7 +3053,12 @@
     "notion_title": null,
     "raw_times": "email time=0:25:14",
     "notion_page": null,
-    "data_issues": null
+    "data_issues": null,
+    "id": "rr:79",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "18245398845"
+    ]
   },
   {
     "race_name": "Busso 100",
@@ -2130,7 +3085,48 @@
     "notion_title": "Busso100",
     "raw_times": "Total Time=452",
     "notion_page": "https://app.notion.com/347e6329323580118c42ccc0e1d71530",
-    "data_issues": "total '452' read as 4:52 (h:mm without separator)"
+    "data_issues": "total '452' read as 4:52 (h:mm without separator)",
+    "id": "rr:58",
+    "source": "Notion",
+    "strava_activity_ids": [
+      "18354460802",
+      "18354460897",
+      "18354460914",
+      "18354460821",
+      "18354460847"
+    ]
+  },
+  {
+    "race_name": "Rottnest Half Marathon Run",
+    "date": "2026-06-14",
+    "discipline": "Run",
+    "distance": "Half Marathon",
+    "distance_km": 21.34,
+    "distance_original": null,
+    "event_type": "Road Race",
+    "race_category": "Half Marathon",
+    "finish_time": "1:47:17",
+    "finish_seconds": 6437,
+    "swim": null,
+    "t1": null,
+    "bike": null,
+    "t2": null,
+    "run": "1:47:17",
+    "location": null,
+    "position": null,
+    "notes": "Detected in Strava (activity 18911100884). Finish time = Strava elapsed time; moving time 1:47:17. Not an official result.",
+    "link": "https://www.strava.com/activities/18911100884",
+    "strava_bike": null,
+    "strava_bike_label": null,
+    "notion_title": null,
+    "raw_times": null,
+    "notion_page": null,
+    "data_issues": null,
+    "id": "strava:18911100884",
+    "source": "Strava (added 19 Oct 2026)",
+    "strava_activity_ids": [
+      "18911100884"
+    ]
   },
   {
     "race_name": "Galup Reserve parkrun #92",
@@ -2157,33 +3153,11 @@
     "notion_title": null,
     "raw_times": "email time=0:25:13",
     "notion_page": null,
-    "data_issues": null
-  },
-  {
-    "race_name": null,
-    "date": null,
-    "discipline": null,
-    "distance": null,
-    "distance_km": null,
-    "distance_original": null,
-    "event_type": null,
-    "race_category": null,
-    "finish_time": null,
-    "finish_seconds": null,
-    "swim": null,
-    "t1": null,
-    "bike": null,
-    "t2": null,
-    "run": null,
-    "location": null,
-    "position": null,
-    "notes": null,
-    "link": null,
-    "strava_bike": null,
-    "strava_bike_label": null,
-    "notion_title": null,
-    "raw_times": null,
-    "notion_page": "https://app.notion.com/3b6e63293235808b935fd811680cd762",
-    "data_issues": "completely empty row in Notion"
+    "data_issues": null,
+    "id": "rr:80",
+    "source": "parkrun",
+    "strava_activity_ids": [
+      "19844049949"
+    ]
   }
 ]

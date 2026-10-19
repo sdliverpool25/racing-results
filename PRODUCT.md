@@ -20,11 +20,11 @@ A browsable archive of Shane's race results. Success means every real race is fi
 
 ## Positioning
 
-Finish times, splits, and notes from one athlete's Airtable table, ranked into personal bests on the page. A generic results widget could not show this history without this table.
+Finish times, splits, and notes from one athlete's Notion race database, ranked into personal bests on the page, plus every Strava activity for a training view. A generic results widget could not show this history without this data.
 
 ## Operating Context
 
-Results are maintained in the Airtable base "Racing Results" (`app3YvIK7HbQSRz9F`), table "Race Results" (`tblY7mO0TnClARyfZ`). The site reads only the static export. A local script rewrites that export when `AIRTABLE_TOKEN` is set. The original notes live in Notion; some rows link back there.
+Results are maintained in Notion: the "Races" and "Strava Activities" databases under Racing Results > Training & Racing Data. The site reads only the static exports in `data/`. A local script (`scripts/refresh_from_notion.py`) rewrites them when `NOTION_TOKEN` is set. The original race notes also live in Notion; some rows link back there.
 
 ## Capabilities and Constraints
 
@@ -33,7 +33,7 @@ Results are maintained in the Airtable base "Racing Results" (`app3YvIK7HbQSRz9F
 - Open a race to see splits, notes, Strava and Notion links, and any data-issues note.
 - Charts: races per year by discipline, and finish time over years for a chosen distance.
 - Hide the empty row and the "COVID YEAR" placeholder unless the reader asks to see them.
-- The site must not contain an Airtable token or any other secret. No GitHub Action that needs secrets.
+- The site must not contain a Notion token or any other secret. The public data must not include activity descriptions, UTC timestamps, or start times finer than the hour. No GitHub Action that needs secrets.
 - 81 records in the export: 79 real races (including 22 parkruns at 5K), one empty row, one placeholder.
 
 ## Brand Commitments
