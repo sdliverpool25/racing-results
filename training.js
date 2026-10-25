@@ -518,11 +518,16 @@
       row.append(el("td", "num", A.formatDuration(activity.moving_s)));
       row.append(el("td", "num", activity.avg_hr == null ? "—" : String(Math.round(activity.avg_hr))));
       const linkCell = el("td");
-      const link = el("a", null, "Strava");
-      link.href = A.activityHref(hrefTemplate, activity.id);
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      linkCell.append(link);
+      if (/^\d+$/.test(String(activity.id))) {
+        const link = el("a", null, "Strava");
+        link.href = A.activityHref(hrefTemplate, activity.id);
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        linkCell.append(link);
+      } else {
+        // Rows added from TrainingPeaks (id "tp-…") have no Strava activity to link to.
+        linkCell.append(el("span", null, "TrainingPeaks"));
+      }
       row.append(linkCell);
       body.append(row);
     });
