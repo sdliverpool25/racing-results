@@ -878,7 +878,7 @@
     els.charts.hidden = false;
   }
 
-  fetch("data/races.json")
+  fetch("data/races.json?v=" + Date.now())
     .then((response) => {
       if (!response.ok) throw new Error("Could not read data/races.json (" + response.status + ").");
       return response.json();

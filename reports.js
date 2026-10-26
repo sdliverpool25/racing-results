@@ -24,7 +24,15 @@
     fallback: document.getElementById("chart-fallback"),
     table: document.getElementById("report-table"),
     download: document.getElementById("download"),
+    weekly: document.getElementById("weekly"),
+    weeklyTable: document.getElementById("weekly-table"),
+    weeklyCaption: document.getElementById("weekly-caption"),
+    weeklyMore: document.getElementById("weekly-more"),
   };
+  const WEEK_PAGE = 12;
+  let weeksShown = WEEK_PAGE;
+  // Bust the browser and CDN cache (GitHub Pages sends max-age=600) so new data shows at once.
+  const BUST = "?v=" + Date.now();
 
   const state = {
     metric: "km",
@@ -153,6 +161,74 @@
     els.table.replaceChildren(table);
   }
 
+  function weeklyRows() {
+    const bags = {};
+    activities.forEach((activity) => {
+      if (activity.date < state.from || activity.date > state.to) return;
+      if (state.sport !== "all" && activity.type !== state.sport) return;
+      const week = A.isoMonday(activity.date);
+      const bag = bags[week] || (bags[week] = { week: week, km: 0, moving: 0, count: 0, tss: 0, tssN: 0, sports: {} });
+      bag.count += 1;
+      bag.km += activity.km || 0;
+      bag.moving += activity.moving_s || 0;
+      if (activity.tss != null) {
+        bag.tss += activity.tss;
+        bag.tssN += 1;
+      }
+      const type = activity.type || "Other";
+      const sport = bag.sports[type] || (bag.sports[type] = { km: 0, moving: 0 });
+      sport.km += activity.km || 0;
+      sport.moving += activity.moving_s || 0;
+    });
+    // Every Mon-Sun week in the range, including empty ones, latest first.
+    return A.eachPeriod(state.from, state.to, "week").reverse().map(
+      (week) => bags[week] || { week: week, km: 0, moving: 0, count: 0, tss: 0, tssN: 0, sports: {} }
+    );
+  }
+
+  function sportSplit(sports) {
+    const order = A.SPORT_ORDER.filter((type) => sports[type]).concat(
+      Object.keys(sports).filter((type) => A.SPORT_ORDER.indexOf(type) === -1).sort()
+    );
+    return order
+      .map((type) => {
+        const s = sports[type];
+        const hours = A.fmt(s.moving / 3600, 1) + " h";
+        return type + " " + (s.km > 0 ? A.fmt(s.km, 1) + " km · " : "") + hours;
+      })
+      .join("; ");
+  }
+
+  function renderWeekly() {
+    const weeks = weeklyRows();
+    const anyTss = weeks.some((w) => w.tssN > 0);
+    const table = el("table", "data-table");
+    const head = el("thead");
+    const headRow = el("tr");
+    ["Week starting", "Hours", "Km", "Sessions"].concat(anyTss ? ["TSS"] : []).concat(["By sport"]).forEach((label, i) => {
+      headRow.append(el("th", i > 0 && label !== "By sport" ? "num" : null, label));
+    });
+    head.append(headRow);
+    const body = el("tbody");
+    weeks.slice(0, weeksShown).forEach((w) => {
+      const tr = el("tr");
+      tr.append(el("td", null, A.formatDate(w.week)));
+      tr.append(el("td", "num", A.fmt(w.moving / 3600, 1)));
+      tr.append(el("td", "num", A.fmt(w.km, 1)));
+      tr.append(el("td", "num", String(w.count)));
+      if (anyTss) tr.append(el("td", "num", w.tssN ? A.fmt(w.tss, 0) : "—"));
+      tr.append(el("td", null, w.count ? sportSplit(w.sports) : "—"));
+      body.append(tr);
+    });
+    table.append(head, body);
+    els.weeklyTable.replaceChildren(table);
+    const sportName = state.sport === "all" ? "all sports" : state.sport;
+    els.weeklyCaption.textContent = "Monday to Sunday weeks, latest first, " + A.formatDate(state.from) + " to " + A.formatDate(state.to) +
+      ", " + sportName + ". Follows the sport and dates chosen in the report below." + (anyTss ? " TSS is summed where a workout has one." : "");
+    els.weeklyMore.hidden = weeks.length <= weeksShown;
+    els.weeklyMore.textContent = "Show more weeks (" + (weeks.length - Math.min(weeksShown, weeks.length)) + " more)";
+  }
+
   function render() {
     if (state.from > state.to) {
       const swap = state.from;
@@ -171,6 +247,7 @@
     const long = rows.length > 80 ? " This is a long range. Month or year is easier to read on a phone." : "";
     els.caption.textContent = A.formatDate(state.from) + " to " + A.formatDate(state.to) + ". " + summary(rows) + long;
     renderTable(rows);
+    renderWeekly();
     writeUrl();
     const color = state.sport === "all" ? "#16352C" : A.SPORT_COLOR[state.sport] || "#16352C";
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches || rows.length > 60;
@@ -269,19 +346,24 @@
         state.chart = els.chartType.value;
         state.from = els.from.value;
         state.to = els.to.value;
+        weeksShown = WEEK_PAGE;
         render();
       });
     });
     els.download.addEventListener("click", download);
+    els.weeklyMore.addEventListener("click", () => {
+      weeksShown += WEEK_PAGE * 2;
+      renderWeekly();
+    });
   }
 
-  fetch("data/activities.json")
+  fetch("data/activities.json" + BUST)
     .then((response) => {
       if (!response.ok) throw new Error("Could not read data/activities.json (" + response.status + ").");
       return response.json();
     })
     .then((file) => {
-      return fetch("data/aggregates.json").then((response) => {
+      return fetch("data/aggregates.json" + BUST).then((response) => {
         if (!response.ok) throw new Error("Could not read data/aggregates.json (" + response.status + ").");
         return response.json().then((aggregates) => ({ file: file, aggregates: aggregates }));
       });
@@ -302,6 +384,7 @@
       fillSports(types);
       els.status.hidden = true;
       els.section.hidden = false;
+      els.weekly.hidden = false;
       bind();
       render();
     })

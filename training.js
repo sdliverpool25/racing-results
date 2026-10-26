@@ -525,8 +525,8 @@
         link.rel = "noopener noreferrer";
         linkCell.append(link);
       } else {
-        // Rows added from TrainingPeaks (id "tp-…") have no Strava activity to link to.
-        linkCell.append(el("span", null, "TrainingPeaks"));
+        // Rows added from Garmin ("garmin-…") or TrainingPeaks ("tp-…") have no Strava activity to link to.
+        linkCell.append(el("span", null, /^garmin-/.test(String(activity.id)) ? "Garmin" : "TrainingPeaks"));
       }
       row.append(linkCell);
       body.append(row);
@@ -679,11 +679,11 @@
   }
 
   Promise.all([
-    fetch("data/activities.json").then((response) => {
+    fetch("data/activities.json?v=" + Date.now()).then((response) => {
       if (!response.ok) throw new Error("Could not read data/activities.json (" + response.status + ").");
       return response.json();
     }),
-    fetch("data/aggregates.json").then((response) => {
+    fetch("data/aggregates.json?v=" + Date.now()).then((response) => {
       if (!response.ok) throw new Error("Could not read data/aggregates.json (" + response.status + ").");
       return response.json();
     }),

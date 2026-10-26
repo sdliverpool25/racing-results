@@ -89,13 +89,14 @@ RACE_FIELDS = (
 ACTIVITY_FIELDS = (
     "id", "date", "hour", "name", "type", "km", "moving_s", "elapsed_s", "elev_m",
     "avg_hr", "max_hr", "avg_watts", "weighted_watts", "cadence", "calories",
-    "relative_effort", "race_id", "dup",
+    "relative_effort", "tss", "race_id", "dup",
 )
 ACTIVITY_PROPS = {
     "km": "Distance km", "moving_s": "Moving s", "elapsed_s": "Elapsed s",
     "elev_m": "Elevation gain m", "avg_hr": "Avg HR", "max_hr": "Max HR",
     "avg_watts": "Avg watts", "weighted_watts": "Weighted avg watts",
     "cadence": "Avg cadence", "calories": "Calories", "relative_effort": "Relative effort",
+    "tss": "TSS",
 }
 INT_KEYS = {"moving_s", "elapsed_s", "avg_hr", "max_hr", "avg_watts", "weighted_watts",
             "calories", "relative_effort", "finish_seconds"}
@@ -273,6 +274,8 @@ def build_activity(row, race_key_by_page):
     links = [race_key_by_page[p] for p in row.get("Race") or [] if p in race_key_by_page]
     a["race_id"] = links[0] if links else None
     a["dup"] = 1 if row.get("Probable duplicate") else 0
+    if a["avg_hr"] == 0:  # Garmin reports 0 when no HR was recorded
+        a["avg_hr"] = None
     return a
 
 

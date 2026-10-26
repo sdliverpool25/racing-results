@@ -28,6 +28,15 @@
       <p class="status">This page reads the activity file in the browser. Enable JavaScript, and open the folder through a local web server rather than as a file.</p>
     </noscript>
 
+    <section id="weekly" class="section" aria-labelledby="weekly-heading" hidden>
+      <h2 id="weekly-heading">Weekly reports</h2>
+      <p id="weekly-caption" class="lede">Monday to Sunday weeks, latest first. Follows the sport and date range chosen below.</p>
+      <div id="weekly-table" class="table-scroll"></div>
+      <div class="choices">
+        <button type="button" id="weekly-more" class="solid" hidden>Show more weeks</button>
+      </div>
+    </section>
+
     <section id="report" class="section" aria-labelledby="report-heading" hidden>
       <h2 id="report-heading">Reports</h2>
       <p class="lede">Pick a metric, a period, and a sport. The address bar keeps the choice, so the chart can be bookmarked or sent as a link. Duplicate uploads are left out.</p>
@@ -100,7 +109,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js"></script>
-  <script src="archive.js"></script>
-  <script src="reports.js"></script>
+  <script src="archive.js?v=20261026"></script>
+  <script src="reports.js?v=20261026"></script>
 </body>
 </html>
