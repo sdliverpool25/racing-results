@@ -82,8 +82,8 @@ def check_races():
 def check_activities():
     fields = ACTS["fields"]
     rows = [dict(zip(fields, row)) for row in ACTS["rows"]]
-    assert len(rows) == 1984 and all(len(r) == len(fields) for r in ACTS["rows"])
-    assert len({r["id"] for r in rows}) == 1984
+    assert len(rows) == 1993 and all(len(r) == len(fields) for r in ACTS["rows"])
+    assert len({r["id"] for r in rows}) == 1993
     forbidden = {"description", "start_utc", "start", "time", "utc"}
     assert not forbidden & set(fields)
     assert all(r["hour"] is None or 0 <= r["hour"] <= 23 for r in rows)
@@ -101,7 +101,7 @@ def check_activities():
 
 def check_aggregates(rows):
     real = [r for r in rows if not r["dup"]]
-    assert AGG["meta"]["activities"] == len(real) == 1980
+    assert AGG["meta"]["activities"] == len(real) == 1989
     for period in ("weekly", "monthly", "yearly"):
         table = AGG[period]
         assert table["fields"] == ["period", "type", "count", "km", "hours"]
@@ -149,7 +149,7 @@ def main():
     check_aggregates(rows)
     check_pages()
     print("archive ok: 97 races (18 from Strava), 15 personal bests, 22 parkruns; "
-          "1984 activities, 157 race links; aggregates consistent; pages exclude Strava elapsed times from bests")
+          "1993 activities, 157 race links; aggregates consistent; pages exclude Strava elapsed times from bests")
 
 
 if __name__ == "__main__":
